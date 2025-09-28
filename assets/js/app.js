@@ -1297,15 +1297,7 @@ function renderAccount(){
     const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'nextmed-backup.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
   });
-  document.getElementById('accClear')?.addEventListener('click', async ()=>{
-    const ok = await showConfirmModal({ title:'Cancella dati cloud', message:'Questa azione rimuove impostazioni, report ed errori salvati nel cloud per il tuo account. Procedere?', okText:'Sì, cancella', cancelText:'Annulla' });
-    if(!ok) return;
-    try{
-      await CLOUD.clearAll();
-    }finally{
-      loadSettingsUI(); renderAccount(); alert('Dati cloud azzerati.');
-    }
-  });
+  // Pulsante clear rimosso dall'UI
 
   // Cambia immagine profilo: click sull'avatar apre file picker
   const fileInput = document.getElementById('accAvatarFile');
