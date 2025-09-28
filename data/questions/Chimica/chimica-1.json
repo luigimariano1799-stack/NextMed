@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "CHI-0001",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0002",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0003",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0004",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0005",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0006",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0007",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0008",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0009",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0010",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0011",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0012",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0013",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0014",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0015",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0016",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0017",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0018",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0019",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0020",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0021",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0022",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0023",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0024",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0025",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0026",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0027",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0028",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0029",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0030",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0031",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0032",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0033",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0034",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0035",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0036",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0037",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0038",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0039",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0040",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0041",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0042",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0043",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0044",
+    "materia": "Chimica",
+    "argomento": "Struttura atomica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Il numero atomico indica:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Protoni",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Protoni+neutroni",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Elettroni nei sali",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Neutroni",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0045",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0046",
+    "materia": "Chimica",
+    "argomento": "Legami",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il legame ionico avviene per:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Condivisione e⁻",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Trasferimento e⁻",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Forze di Van der Waals",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Legami H",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0047",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0048",
+    "materia": "Chimica",
+    "argomento": "Stechiometria",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il volume molare di un gas ideale a STP è circa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "11,2 L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "22,4 L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "44,8 L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "6,02 L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "CHI-0049",
+    "materia": "Chimica",
+    "argomento": "Acidi e basi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Un pH = 3 implica [H⁺] ≈",
+    "options": [
+      {
+        "k": "A",
+        "t": "10⁻³ M",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "10⁻⁶ M",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "10³ M",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "3 M",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "CHI-0050",
+    "materia": "Chimica",
+    "argomento": "Soluzioni",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Una soluzione 1 M di NaCl contiene:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 g/L",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "58,44 g/L",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "0,1 mol/L",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "10 mol/L",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  }
+]

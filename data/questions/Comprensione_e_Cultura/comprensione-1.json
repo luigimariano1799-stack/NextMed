@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "COM-0001",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0002",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0003",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0004",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 90,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0005",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0006",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0007",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0008",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0009",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0010",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0011",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0012",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0013",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0014",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0015",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0016",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0017",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0018",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0019",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0020",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0021",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0022",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0023",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0024",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0025",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0026",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 90,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0027",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0028",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0029",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0030",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0031",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0032",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0033",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 90,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0034",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0035",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 1,
+    "time": 90,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0036",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0037",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0038",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0039",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0040",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0041",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0042",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0043",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0044",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0045",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0046",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0047",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 90,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0048",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 1,
+    "time": 100,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "COM-0049",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Microplastiche",
+    "type": "single",
+    "difficulty": 2,
+    "time": 100,
+    "stem": "Le microplastiche sono diffuse; gli effetti sanitari sono oggetto di studi in evoluzione.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Effetti definiti",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Non entrano in catena alimentare",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "Evidenze in evoluzione",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "Sono innocue",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "COM-0050",
+    "materia": "Comprensione e Cultura",
+    "argomento": "Energia rinnovabile",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Le tecnologie rinnovabili crescono; l'intermittenza richiede accumulo e reti intelligenti.\n\nDomanda: Qual è l'informazione chiave secondo il testo?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Alti costi iniziali",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Intermittenza",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Mancanza incentivi",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Bassa efficienza reti",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  }
+]

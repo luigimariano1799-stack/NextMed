@@ -1,0 +1,11 @@
+{
+  "name": "nextmed-site",
+  "version": "1.0.0",
+  "description": "NextMed — sito statico per esercitazioni e simulazioni",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "start:live": "live-server --port=8000"
+  },
+  "author": "",
+  "license": "MIT"
+}

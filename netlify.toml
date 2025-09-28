@@ -1,0 +1,13 @@
+[build]
+  publish = "/"
+  command = ""
+
+[dev]
+  port = 8888
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+
+[context.production.environment]
+  NODE_ENV = "production"

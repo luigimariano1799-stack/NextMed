@@ -1,0 +1,28 @@
+{
+  "materie": {
+    "Biologia": [
+      "questions/Biologia/biologia.json",
+      "questions/Biologia/biologia-1.json"
+    ],
+    "Chimica": [
+      "questions/Chimica/chimica.json",
+      "questions/Chimica/chimica-1.json"
+    ],
+    "Comprensione e Cultura": [
+      "questions/Comprensione_e_Cultura/comprensione_e_cultura.json",
+      "questions/Comprensione_e_Cultura/comprensione-1.json"
+    ],
+    "Fisica": [
+      "questions/Fisica/fisica.json",
+      "questions/Fisica/fisica-1.json"
+    ],
+    "Logica e Problem Solving": [
+      "questions/Logica_e_Problem_Solving/logica_e_problem_solving.json",
+      "questions/Logica_e_Problem_Solving/logica-1.json"
+    ],
+    "Matematica": [
+      "questions/Matematica/matematica.json",
+      "questions/Matematica/matematica-1.json"
+    ]
+  }
+}

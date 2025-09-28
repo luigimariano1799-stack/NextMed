@@ -1,0 +1,1038 @@
+{
+  "categorie_index": [
+    {
+      "n": 1,
+      "slug": "cellula-organizzazione-biologica",
+      "label": "Cellula e organizzazione biologica"
+    },
+    {
+      "n": 2,
+      "slug": "genetica-biologia-molecolare",
+      "label": "Genetica e biologia molecolare"
+    },
+    {
+      "n": 3,
+      "slug": "fisiologia-umana",
+      "label": "Fisiologia umana"
+    },
+    {
+      "n": 4,
+      "slug": "microbiologia-immunologia",
+      "label": "Microbiologia e immunologia"
+    },
+    {
+      "n": 5,
+      "slug": "chimica-dei-viventi",
+      "label": "Chimica dei viventi"
+    },
+    {
+      "n": 6,
+      "slug": "molecole-enzimi",
+      "label": "Molecole organiche e enzimi"
+    },
+    {
+      "n": 7,
+      "slug": "membrana-strutture-cellulari",
+      "label": "Membrana e strutture cellulari"
+    },
+    {
+      "n": 8,
+      "slug": "ciclo-cellulare-riproduzione",
+      "label": "Ciclo cellulare e riproduzione"
+    },
+    {
+      "n": 9,
+      "slug": "riproduzione-ereditarieta",
+      "label": "Riproduzione ed ereditarietà"
+    },
+    {
+      "n": 10,
+      "slug": "genetica-mendeliana-classica",
+      "label": "Genetica: mendeliana e classica"
+    },
+    {
+      "n": 11,
+      "slug": "genetica-molecolare",
+      "label": "Genetica molecolare"
+    },
+    {
+      "n": 12,
+      "slug": "genetica-umana",
+      "label": "Genetica umana"
+    },
+    {
+      "n": 13,
+      "slug": "mutazioni-evoluzione",
+      "label": "Mutazioni ed evoluzione"
+    },
+    {
+      "n": 14,
+      "slug": "biotecnologie",
+      "label": "Biotecnologie"
+    },
+    {
+      "n": 15,
+      "slug": "anatomia-fisiologia",
+      "label": "Anatomia e fisiologia"
+    },
+    {
+      "n": 16,
+      "slug": "bioenergetica",
+      "label": "Bioenergetica"
+    }
+  ],
+  "domande": [
+    {
+      "id": "BIO-0001",
+      "materia": "Biologia",
+      "argomento": "Immunologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 60,
+      "stem": "Le IgE sono tipicamente associate a:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Risposta primaria",
+          "correct": false
+        },
+        {
+          "k": "B",
+          "t": "Allergie e parassiti",
+          "correct": true
+        },
+        {
+          "k": "C",
+          "t": "Immunità mucosale",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Neutralizzazione batterica",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: B.",
+      "categoria": "microbiologia-immunologia",
+      "target": 4
+    },
+    {
+      "id": "BIO-0002",
+      "materia": "Biologia",
+      "argomento": "Genetica & DNA",
+      "type": "single",
+      "difficulty": 1,
+      "time": 60,
+      "stem": "Nella replicazione del DNA ogni elica figlia contiene:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Due filamenti nuovi",
+          "correct": false
+        },
+        {
+          "k": "B",
+          "t": "Due filamenti parentali",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Un filamento nuovo e uno parentale",
+          "correct": true
+        },
+        {
+          "k": "D",
+          "t": "Tre filamenti",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: C.",
+      "categoria": "genetica-biologia-molecolare",
+      "target": 2
+    },
+    {
+      "id": "BIO-0003",
+      "materia": "Biologia",
+      "argomento": "Citologia",
+      "type": "single",
+      "difficulty": 3,
+      "time": 70,
+      "stem": "Quale organello produce la maggior parte dell'ATP in una cellula eucariotica?",
+      "options": [
+        {
+          "k": "A",
+          "t": "Mitocondrio",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Nucleolo",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Ribosoma",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Lisosoma",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "membrana-strutture-cellulari",
+      "target": 7
+    },
+    {
+      "id": "BIO-0004",
+      "materia": "Biologia",
+      "argomento": "Fisiologia",
+      "type": "single",
+      "difficulty": 3,
+      "time": 60,
+      "stem": "La curva dell'emoglobina si sposta a destra con:",
+      "options": [
+        {
+          "k": "A",
+          "t": "pH ↑",
+          "correct": false
+        },
+        {
+          "k": "B",
+          "t": "T ↓",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "CO₂ ↑",
+          "correct": true
+        },
+        {
+          "k": "D",
+          "t": "2,3-BPG ↓",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: C.",
+      "categoria": "fisiologia-umana",
+      "target": 3
+    },
+    {
+      "id": "BIO-0005",
+      "materia": "Biologia",
+      "argomento": "Cellula e organizzazione biologica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Quale è la funzione principale del reticolo endoplasmatico ruvido?",
+      "options": [
+        {
+          "k": "A",
+          "t": "Sintesi proteica",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Produzione ATP",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Degradazione perossidi",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Sintesi acidi grassi",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "cellula-organizzazione-biologica",
+      "target": 1
+    },
+    {
+      "id": "BIO-0006",
+      "materia": "Biologia",
+      "argomento": "Cellula e organizzazione biologica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Il citoscheletro comprende principalmente:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Microtubuli, microfilamenti, filamenti intermedi",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Actina e miosina soltanto",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Collagene e elastina",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Ciglia e flagelli",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "cellula-organizzazione-biologica",
+      "target": 1
+    },
+    {
+      "id": "BIO-0007",
+      "materia": "Biologia",
+      "argomento": "Citologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La diffusione facilitata richiede:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Proteine di membrana",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "ATP",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Canali del calcio voltaggio-dipendenti",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Pompe protoniche",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "membrana-strutture-cellulari",
+      "target": 7
+    },
+    {
+      "id": "BIO-0008",
+      "materia": "Biologia",
+      "argomento": "Citologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Il colesterolo nella membrana plasmatica:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Modula la fluidità in funzione della temperatura",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Riduce la permeabilità all'acqua azzerandola",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Forma giunzioni serrate",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Attiva direttamente la trascrizione",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "membrana-strutture-cellulari",
+      "target": 7
+    },
+    {
+      "id": "BIO-0009",
+      "materia": "Biologia",
+      "argomento": "Ciclo cellulare",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Il passaggio G1/S è controllato principalmente da:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Cdk2-Ciclina E",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Cdk1-Ciclina B",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Cdk4-Ciclina B",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Cdk7-Ciclina H",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "ciclo-cellulare-riproduzione",
+      "target": 8
+    },
+    {
+      "id": "BIO-0010",
+      "materia": "Biologia",
+      "argomento": "Ciclo cellulare",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Durante l'anafase della mitosi:",
+      "options": [
+        {
+          "k": "A",
+          "t": "I cromatidi fratelli si separano e migrano ai poli opposti",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "La membrana nucleare si riforma",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Avviene crossing-over",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Si sintetizza RNA ribosomiale",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "ciclo-cellulare-riproduzione",
+      "target": 8
+    },
+    {
+      "id": "BIO-0011",
+      "materia": "Biologia",
+      "argomento": "Genetica classica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Nell'incrocio diibrido mendeliano il rapporto fenotipico atteso F2 è:",
+      "options": [
+        {
+          "k": "A",
+          "t": "9:3:3:1",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "3:1",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "1:1",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "1:2:1",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-mendeliana-classica",
+      "target": 10
+    },
+    {
+      "id": "BIO-0012",
+      "materia": "Biologia",
+      "argomento": "Genetica classica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Un allele recessivo letale in omozigosi produce su F2 un rapporto fenotipico:",
+      "options": [
+        {
+          "k": "A",
+          "t": "2:1",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "3:1",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "1:2:1",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "9:3:3:1",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-mendeliana-classica",
+      "target": 10
+    },
+    {
+      "id": "BIO-0013",
+      "materia": "Biologia",
+      "argomento": "Genetica molecolare",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La RNA polimerasi in procarioti si lega inizialmente al:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Promotore",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Enhancer",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Operone",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Introne",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-molecolare",
+      "target": 11
+    },
+    {
+      "id": "BIO-0014",
+      "materia": "Biologia",
+      "argomento": "Genetica molecolare",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Le regioni 'TATA box' sono tipiche dei promotori:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Eucariotici",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Procariotici",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Mitocondriali",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Plastidiali",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-molecolare",
+      "target": 11
+    },
+    {
+      "id": "BIO-0015",
+      "materia": "Biologia",
+      "argomento": "Genetica umana",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "L'eredità mitocondriale è:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Materna",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Paterna",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Autosomica recessiva",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Legata all'Y",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-umana",
+      "target": 12
+    },
+    {
+      "id": "BIO-0016",
+      "materia": "Biologia",
+      "argomento": "Genetica umana",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La penetranza incompleta indica che:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Non tutti i portatori dell'allele manifestano il fenotipo",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "L'allele non produce mai effetto",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Due geni interagiscono epistaticamente",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Espressione genica uguale in tutti i tessuti",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "genetica-umana",
+      "target": 12
+    },
+    {
+      "id": "BIO-0017",
+      "materia": "Biologia",
+      "argomento": "Immunologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Le cellule presentanti l'antigene professionali includono:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Dendritiche, macrofagi, linfociti B",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Neutrofili, eosinofili, basofili",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Cellule NK, T citotossiche, T helper",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Fibroblasti, adipociti, condrociti",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "microbiologia-immunologia",
+      "target": 4
+    },
+    {
+      "id": "BIO-0018",
+      "materia": "Biologia",
+      "argomento": "Immunologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Le IgA sono predominanti in:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Secrezioni mucose",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Siero",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Placenta",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Cellule T",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "microbiologia-immunologia",
+      "target": 4
+    },
+    {
+      "id": "BIO-0019",
+      "materia": "Biologia",
+      "argomento": "Chimica dei viventi",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Il legame idrogeno si forma tra:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Un H legato a un atomo elettronegativo e un altro atomo elettronegativo",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Due atomi di idrogeno",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Due atomi di carbonio",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "H e un metallo alcalino",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "chimica-dei-viventi",
+      "target": 5
+    },
+    {
+      "id": "BIO-0020",
+      "materia": "Biologia",
+      "argomento": "Enzimologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Un inibitore competitivo:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Aumenta Km e non modifica Vmax",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Riduce Vmax senza modificare Km",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Riduce sia Km che Vmax",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Aumenta Vmax",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "molecole-enzimi",
+      "target": 6
+    },
+    {
+      "id": "BIO-0021",
+      "materia": "Biologia",
+      "argomento": "Bioenergetica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Nella catena respiratoria il complesso che ossida NADH è:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Complesso I",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Complesso II",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Complesso III",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Complesso IV",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "bioenergetica",
+      "target": 16
+    },
+    {
+      "id": "BIO-0022",
+      "materia": "Biologia",
+      "argomento": "Bioenergetica",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Il gradiente protonico mitocondriale è utilizzato da:",
+      "options": [
+        {
+          "k": "A",
+          "t": "ATP sintasi",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Citrato sintasi",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "DNA polimerasi γ",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Acetil-CoA carbossilasi",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "bioenergetica",
+      "target": 16
+    },
+    {
+      "id": "BIO-0023",
+      "materia": "Biologia",
+      "argomento": "Mutazioni ed evoluzione",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Una mutazione missenso causa:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Sostituzione di un amminoacido con un altro",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Formazione di codone di stop",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Nessun cambiamento amminoacidico",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Inserzione di grandi sequenze",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "mutazioni-evoluzione",
+      "target": 13
+    },
+    {
+      "id": "BIO-0024",
+      "materia": "Biologia",
+      "argomento": "Mutazioni ed evoluzione",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La deriva genetica è più intensa in:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Piccole popolazioni",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Grandi popolazioni",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Popolazioni panmittiche infinite",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Specie clonali solamente",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "mutazioni-evoluzione",
+      "target": 13
+    },
+    {
+      "id": "BIO-0025",
+      "materia": "Biologia",
+      "argomento": "Biotecnologie",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La reazione di PCR richiede come enzima chiave:",
+      "options": [
+        {
+          "k": "A",
+          "t": "DNA polimerasi termostabile",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Ligasi T4",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "RNA polimerasi II",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Topoisomerasi I",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "biotecnologie",
+      "target": 14
+    },
+    {
+      "id": "BIO-0026",
+      "materia": "Biologia",
+      "argomento": "Biotecnologie",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "Un plasmide vettore contiene tipicamente:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Origine di replicazione e marker di selezione",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Centromero e telomeri",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Introni e esoni",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Enhancer e silencer umani",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "biotecnologie",
+      "target": 14
+    },
+    {
+      "id": "BIO-0027",
+      "materia": "Biologia",
+      "argomento": "Fisiologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "L'ormone che aumenta la glicemia stimolando la glicogenolisi epatica è:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Glucagone",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Insulina",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Somatostatina",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Leptina",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "anatomia-fisiologia",
+      "target": 15
+    },
+    {
+      "id": "BIO-0028",
+      "materia": "Biologia",
+      "argomento": "Fisiologia",
+      "type": "single",
+      "difficulty": 2,
+      "time": 70,
+      "stem": "La filtrazione glomerulare avviene principalmente a livello di:",
+      "options": [
+        {
+          "k": "A",
+          "t": "Corpuscolo di Malpighi (glomerulo + capsula di Bowman)",
+          "correct": true
+        },
+        {
+          "k": "B",
+          "t": "Ansa di Henle",
+          "correct": false
+        },
+        {
+          "k": "C",
+          "t": "Dotto collettore",
+          "correct": false
+        },
+        {
+          "k": "D",
+          "t": "Tubulo prossimale distale",
+          "correct": false
+        }
+      ],
+      "solution": "Risposta corretta: A.",
+      "categoria": "anatomia-fisiologia",
+      "target": 15
+    }
+  ]
+}

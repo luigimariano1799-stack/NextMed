@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "LOG-0001",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0002",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0003",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0004",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0005",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0006",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0007",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0008",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0009",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0010",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0011",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0012",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0013",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0014",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0015",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0016",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0017",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0018",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0019",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0020",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0021",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0022",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0023",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0024",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0025",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0026",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0027",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0028",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0029",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0030",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0031",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0032",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0033",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0034",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0035",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Insiemi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Negazione di 'tutti gli X sono Y':",
+    "options": [
+      {
+        "k": "A",
+        "t": "nessun X è Y",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "alcuni X non sono Y",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "tutti gli X non sono Y",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "alcuni Y non sono X",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0036",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0037",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0038",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0039",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0040",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0041",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0042",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0043",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0044",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0045",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Logica verbale",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Analogia: CUORE : POMPA = POLMONE : ?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Filtro",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Scambio",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Ventola",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Spugna",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0046",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Serie numerica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Prossimo numero: 2,4,8,16,...",
+    "options": [
+      {
+        "k": "A",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "20",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "24",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "32",
+        "correct": true
+      }
+    ],
+    "solution": "Risposta corretta: D."
+  },
+  {
+    "id": "LOG-0047",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0048",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0049",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Problem solving",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "180 km a 90 km/h richiedono:",
+    "options": [
+      {
+        "k": "A",
+        "t": "1 h",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "2 h",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "3 h",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "4 h",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "LOG-0050",
+    "materia": "Logica e Problem Solving",
+    "argomento": "Sillogismi",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Tutti i medici sono laureati. Luca è medico. Dunque:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Non è laureato",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "È laureato",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "È infermiere",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Impossibile dirlo",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  }
+]

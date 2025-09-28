@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "MAT-0001",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0002",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0003",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0004",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0005",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0006",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0007",
+    "materia": "Matematica",
+    "argomento": "Geometria",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Area cerchio r=3:",
+    "options": [
+      {
+        "k": "A",
+        "t": "9π",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "6π",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "3π",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "π/3",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0008",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0009",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0010",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0011",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0012",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0013",
+    "materia": "Matematica",
+    "argomento": "Geometria",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Area cerchio r=3:",
+    "options": [
+      {
+        "k": "A",
+        "t": "9π",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "6π",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "3π",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "π/3",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0014",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0015",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0016",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0017",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0018",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0019",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0020",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0021",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0022",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0023",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0024",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0025",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0026",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0027",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0028",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0029",
+    "materia": "Matematica",
+    "argomento": "Geometria",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Area cerchio r=3:",
+    "options": [
+      {
+        "k": "A",
+        "t": "9π",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "6π",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "3π",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "π/3",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0030",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0031",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0032",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0033",
+    "materia": "Matematica",
+    "argomento": "Algebra",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Soluzione di 2x−6=0:",
+    "options": [
+      {
+        "k": "A",
+        "t": "x=−3",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "x=0",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x=3",
+        "correct": true
+      },
+      {
+        "k": "D",
+        "t": "x=6",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: C."
+  },
+  {
+    "id": "MAT-0034",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0035",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0036",
+    "materia": "Matematica",
+    "argomento": "Geometria",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Area cerchio r=3:",
+    "options": [
+      {
+        "k": "A",
+        "t": "9π",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "6π",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "3π",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "π/3",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0037",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0038",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0039",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0040",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0041",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0042",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0043",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0044",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0045",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0046",
+    "materia": "Matematica",
+    "argomento": "Geometria",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Area cerchio r=3:",
+    "options": [
+      {
+        "k": "A",
+        "t": "9π",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "6π",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "3π",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "π/3",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0047",
+    "materia": "Matematica",
+    "argomento": "Probabilità",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "P(testà) con moneta equa:",
+    "options": [
+      {
+        "k": "A",
+        "t": "0",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/2",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "1",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "2",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0048",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "MAT-0049",
+    "materia": "Matematica",
+    "argomento": "Aritmetica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Il MCD tra 24 e 36 è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "6",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "12",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "18",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "24",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "MAT-0050",
+    "materia": "Matematica",
+    "argomento": "Calcolo",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Derivata di x²:",
+    "options": [
+      {
+        "k": "A",
+        "t": "2x",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "x",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "x³",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "costante",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  }
+]

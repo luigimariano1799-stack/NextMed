@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "FIS-0001",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0002",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0003",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0004",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0005",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0006",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0007",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0008",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0009",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0010",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0011",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0012",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0013",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0014",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0015",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 70,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0016",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0017",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0018",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0019",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0020",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0021",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0022",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0023",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0024",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0025",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0026",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0027",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0028",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0029",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0030",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0031",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0032",
+    "materia": "Fisica",
+    "argomento": "Energia",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "Energia potenziale gravitazionale:",
+    "options": [
+      {
+        "k": "A",
+        "t": "mgh",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "1/2 mv²",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "qV",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "k q₁q₂/r",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0033",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0034",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0035",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0036",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0037",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 80,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0038",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0039",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0040",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0041",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0042",
+    "materia": "Fisica",
+    "argomento": "Elettrostatica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "La legge di Coulomb descrive:",
+    "options": [
+      {
+        "k": "A",
+        "t": "Forza tra masse",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "Forza tra cariche",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "Corrente",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "Campo magnetico",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0043",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0044",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 70,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  },
+  {
+    "id": "FIS-0045",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0046",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 60,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0047",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 3,
+    "time": 60,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0048",
+    "materia": "Fisica",
+    "argomento": "Ottica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "Equazione lenti sottili:",
+    "options": [
+      {
+        "k": "A",
+        "t": "f= pq/(p+q)",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "1/f = 1/p + 1/q",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "f= p+q",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "q=fp",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0049",
+    "materia": "Fisica",
+    "argomento": "Cinematica",
+    "type": "single",
+    "difficulty": 1,
+    "time": 80,
+    "stem": "L'unità SI della velocità è:",
+    "options": [
+      {
+        "k": "A",
+        "t": "m",
+        "correct": false
+      },
+      {
+        "k": "B",
+        "t": "m/s",
+        "correct": true
+      },
+      {
+        "k": "C",
+        "t": "m/s²",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "N",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: B."
+  },
+  {
+    "id": "FIS-0050",
+    "materia": "Fisica",
+    "argomento": "Dinamica",
+    "type": "single",
+    "difficulty": 2,
+    "time": 70,
+    "stem": "La seconda legge di Newton:",
+    "options": [
+      {
+        "k": "A",
+        "t": "F=ma",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "P=F·v",
+        "correct": false
+      },
+      {
+        "k": "C",
+        "t": "L=Δp",
+        "correct": false
+      },
+      {
+        "k": "D",
+        "t": "W=ΔK",
+        "correct": false
+      }
+    ],
+    "solution": "Risposta corretta: A."
+  }
+]

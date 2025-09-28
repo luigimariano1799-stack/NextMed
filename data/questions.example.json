@@ -1,0 +1,31 @@
+[
+  {
+    "id": "DEMO-1",
+    "materia": "Biologia",
+    "argomento": "Membrana",
+    "type": "single",
+    "difficulty": 1,
+    "time": 60,
+    "stem": "Esempio JSON domanda?",
+    "options": [
+      {
+        "k": "A",
+        "t": "Opzione A",
+        "correct": true
+      },
+      {
+        "k": "B",
+        "t": "Opzione B"
+      },
+      {
+        "k": "C",
+        "t": "Opzione C"
+      },
+      {
+        "k": "D",
+        "t": "Opzione D"
+      }
+    ],
+    "solution": "Soluzione demo."
+  }
+]

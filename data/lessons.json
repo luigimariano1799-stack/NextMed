@@ -1,0 +1,633 @@
+[
+  {
+    "materia": "Comprensione e Cultura",
+    "macro": "Analisi del testo e comprensione",
+    "micro": "Individuazione idea principale",
+    "html": "<h3>Individuazione dell'idea principale</h3><p>Come riconoscere il messaggio centrale di un brano e distinguere dettagli secondari.</p>"
+  },
+  {
+    "materia": "Comprensione e Cultura",
+    "macro": "Analisi del testo e comprensione",
+    "micro": "Inferenze e impliciti",
+    "html": "<h3>Inferenze</h3><p>Ricavare informazioni non esplicite: deduzioni e uso del contesto.</p>"
+  },
+  {
+    "materia": "Logica e Problem Solving",
+    "macro": "Ragionamento verbale",
+    "micro": "Relazioni semantiche",
+    "html": "<h3>Relazioni semantiche</h3><p>Sinonimia, antonimia, analogie e completamento di frasi.</p>"
+  },
+  {
+    "materia": "Logica e Problem Solving",
+    "macro": "Ragionamento logico-matematico",
+    "micro": "Proporzioni e percentuali",
+    "html": "<h3>Proporzioni</h3><p>Calcoli rapidi con proporzioni e percentuali.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Cellula e organizzazione biologica",
+    "micro": "Struttura della cellula",
+    "html": "<h3>Cellula</h3><p>Composizione della cellula e differenze tra procarioti ed eucarioti.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica e biologia molecolare",
+    "micro": "DNA, RNA e sintesi proteica",
+    "html": "<h3>Genetica molecolare</h3><p>Struttura del DNA, trascrizione, traduzione e mutazioni.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Fisiologia umana",
+    "micro": "Sistema cardiovascolare",
+    "html": "<h3>Cardiocircolatorio</h3><p>Cuore, circolazione, pressione arteriosa e componenti del sangue.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Microbiologia e immunologia",
+    "micro": "Batteri, virus, funghi",
+    "html": "<h3>Agenti patogeni</h3><p>Caratteristiche di batteri, virus e funghi; principi di contagio e prevenzione.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Chimica dei viventi",
+    "micro": "La chimica dei viventi",
+    "html": "<h3>La chimica dei viventi</h3><p>Elementi chimici principali, acqua, sali minerali, e ruolo chimico nelle strutture biologiche.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Chimica dei viventi",
+    "micro": "Interazioni deboli",
+    "html": "<h3>Interazioni deboli</h3><p>Legami idrogeno, forze di Van der Waals, interazioni elettrostatiche e la loro importanza biologica.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Molecole organiche e enzimi",
+    "micro": "Molecole organiche e funzioni",
+    "html": "<h3>Molecole organiche</h3><p>Carboidrati, lipidi, proteine, acidi nucleici: struttura e funzioni biologiche essenziali.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Molecole organiche e enzimi",
+    "micro": "Ruolo degli enzimi",
+    "html": "<h3>Enzimi</h3><p>Catalisi biologica, specificità, fattori che influenzano l'attività enzimatica e esempi rilevanti.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Membrana e strutture cellulari",
+    "micro": "Membrana cellulare: struttura e funzioni",
+    "html": "<h3>Membrana cellulare</h3><p>Struttura del doppio strato fosfolipidico, proteine di membrana e loro ruoli funzionali.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Membrana e strutture cellulari",
+    "micro": "Trasporto attraverso la membrana",
+    "html": "<h3>Trasporto</h3><p>Diffusione semplice, facilitata, osmosi, trasporto attivo, endocitosi ed esocitosi.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Membrana e strutture cellulari",
+    "micro": "Organuli e funzioni",
+    "html": "<h3>Organuli cellulari</h3><p>Mitocondri, reticolo endoplasmatico, apparato di Golgi, lisosomi, cloroplasti e loro funzioni.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Ciclo cellulare e riproduzione",
+    "micro": "Ciclo cellulare, mitosi e meiosi",
+    "html": "<h3>Ciclo cellulare</h3><p>Fasi del ciclo cellulare, controllo del ciclo, mitosi e meiosi e loro significato biologico.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Riproduzione ed ereditarietà",
+    "micro": "Riproduzione sessuata e asessuata",
+    "html": "<h3>Riproduzione</h3><p>Caratteristiche, vantaggi e esempi di riproduzione sessuata e asessuata nei viventi.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica: mendeliana e classica",
+    "micro": "Genetica mendeliana",
+    "html": "<h3>Genetica mendeliana</h3><p>Leggi di Mendel, dominanza, recessività, monohibridi e dihibridi e applicazioni pratiche.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica: mendeliana e classica",
+    "micro": "Teoria cromosomica e modelli di ereditarietà",
+    "html": "<h3>Genetica classica</h3><p>Teoria cromosomica dell'ereditarietà, cariotipi, cromosomi sessuali e modelli di ereditarietà.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica molecolare",
+    "micro": "Struttura e duplicazione del DNA",
+    "html": "<h3>DNA</h3><p>Struttura, replicazione, differenze tra DNA procariotico ed eucariotico.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica molecolare",
+    "micro": "Sintesi proteica e regolazione dell'espressione genica",
+    "html": "<h3>Sintesi proteica</h3><p>Trascrizione, traduzione, codice genetico e meccanismi di controllo dell'espressione genica.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Genetica umana",
+    "micro": "Trasmissione dei caratteri e malattie ereditarie",
+    "html": "<h3>Genetica umana</h3><p>Modalità di trasmissione, caratteri mono- e polifattoriali; esempi di malattie ereditarie.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Mutazioni ed evoluzione",
+    "micro": "Mutazioni e basi genetiche dell'evoluzione",
+    "html": "<h3>Mutazioni</h3><p>Tipi di mutazioni, cause, effetti fenotipici e ruolo nella selezione naturale e artificiale.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Mutazioni ed evoluzione",
+    "micro": "Teorie evolutive e selezione",
+    "html": "<h3>Evoluzione</h3><p>Teorie evolutive principali, selezione naturale, deriva genetica e adattamento.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Biotecnologie",
+    "micro": "Tecnologia del DNA ricombinante",
+    "html": "<h3>DNA ricombinante</h3><p>Tecniche di clonazione, PCR, editing genetico e principali applicazioni biotecnologiche.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Anatomia e fisiologia",
+    "micro": "Tessuti animali",
+    "html": "<h3>Tessuti animali</h3><p>Tipi di tessuti (epiteliale, connettivo, muscolare, nervoso) e loro funzioni.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Anatomia e fisiologia",
+    "micro": "Sistemi e apparati dell'uomo",
+    "html": "<h3>Sistemi e apparati</h3><p>Anatomia e fisiologia dei principali sistemi (cardiocircolatorio, respiratorio, digerente, nervoso) e loro interazioni.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Anatomia e fisiologia",
+    "micro": "Omeostasi",
+    "html": "<h3>Omeostasi</h3><p>Principi di omeostasi e meccanismi di controllo dell'ambiente interno.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Bioenergetica",
+    "micro": "ATP e reazioni di ossidoriduzione",
+    "html": "<h3>ATP e reazioni</h3><p>Il ruolo dell'ATP come valuta energetica; principi di ossidoriduzione nei viventi.</p>"
+  },
+  {
+    "materia": "Biologia",
+    "macro": "Bioenergetica",
+    "micro": "Processi energetici: fotosintesi e respirazione",
+    "html": "<h3>Processi energetici</h3><p>Fotosintesi, glicolisi, ciclo di Krebs, catena di trasporto degli elettroni e fermentazione.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Chimica generale",
+    "micro": "Atomo, legami e tavola periodica",
+    "html": "<h3>Chimica generale</h3><p>Struttura atomica e legami chimici fondamentali.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Chimica analitica",
+    "micro": "Concentrazioni e diluizioni",
+    "html": "<h3>Concentrazioni</h3><p>Unità di concentrazione (M, % w/v), diluizioni e preparazione di soluzioni.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Costituzione della materia",
+    "micro": "Stati di aggregazione e sistemi",
+    "html": "<h3>Stati di aggregazione</h3><p>Solidi, liquidi, gas; sistemi omogenei e eterogenei; composti ed elementi.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Gas e termodinamica",
+    "micro": "Leggi dei gas perfetti",
+    "html": "<h3>Gas perfetti</h3><p>Equazione di stato PV=nRT, relazioni tra pressione, volume e temperatura.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Struttura atomica",
+    "micro": "Particelle elementari e numeri atomici",
+    "html": "<h3>Struttura dell'atomo</h3><p>Protoni, neutroni, elettroni; numero atomico e numero di massa; isotopi.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Struttura atomica",
+    "micro": "Struttura elettronica",
+    "html": "<h3>Struttura elettronica</h3><p>Configurazione elettronica degli atomi, livelli energetici e organizzazione degli elettroni.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Sistema periodico",
+    "micro": "Gruppi, periodi e proprietà periodiche",
+    "html": "<h3>Sistema periodico</h3><p>Gruppi e periodi, elementi di transizione, raggio atomico, energia di prima ionizzazione, affinità elettronica e carattere metallico.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Legame chimico",
+    "micro": "Tipi di legame e polarità",
+    "html": "<h3>Legame chimico</h3><p>Legame ionico, covalente, metallico; elettronegatività, polarità e legami intermolecolari.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Chimica inorganica",
+    "micro": "Nomenclatura e principali composti",
+    "html": "<h3>Chimica inorganica</h3><p>Ossidi, idrossidi, acidi, sali: nomenclatura e proprietà generali.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Reazioni e stechiometria",
+    "micro": "Massa atomica, mole e bilanciamento",
+    "html": "<h3>Stechiometria</h3><p>Massa atomica e molecolare, numero di Avogadro, concetto di mole e calcoli stechiometrici di base.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Reazioni e stechiometria",
+    "micro": "Tipi di reazione e bilanciamento",
+    "html": "<h3>Tipi di reazione</h3><p>Reazioni di sintesi, decomposizione, scambio, acido-base, ossidoriduzione e bilanciamento semplice.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Soluzioni e equilibri",
+    "micro": "Solubilità e concentrazioni",
+    "html": "<h3>Soluzioni</h3><p>Proprietà solventi dell'acqua, solubilità, espressione delle concentrazioni (M, % w/v, ppm).</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Soluzioni e equilibri",
+    "micro": "Equilibri in soluzione acquosa",
+    "html": "<h3>Equilibri in soluzione</h3><p>Equilibri chimici, costante di equilibrio, principio di Le Chatelier in soluzioni acquose.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Cinetica e catalisi",
+    "micro": "Cinetica chimica e catalisi",
+    "html": "<h3>Cinetica</h3><p>Velocità di reazione, ordine di reazione, fattori che influenzano la velocità e ruolo dei catalizzatori.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Ossidazione e riduzione",
+    "micro": "Numero di ossidazione e bilanciamento",
+    "html": "<h3>Ossidazione e riduzione</h3><p>Numero di ossidazione, concetto di ossidante e riducente, bilanciamento di semplici reazioni redox.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Acidi e basi",
+    "micro": "Concetti di acido e base e pH",
+    "html": "<h3>Acidi e basi</h3><p>Definizioni, pH, idrolisi, soluzioni tampone e indicatori acido-base.</p>"
+  },
+  {
+    "materia": "Chimica",
+    "macro": "Chimica organica",
+    "micro": "Fondamenti di chimica organica",
+    "html": "<h3>Chimica organica</h3><p>Legami C-C, isomeria, idrocarburi (alifatici, aliciclici, aromatici) e principali gruppi funzionali.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Aritmetica e algebra",
+    "micro": "Operazioni, frazioni, proporzioni",
+    "html": "<h3>Proporzioni e frazioni</h3><p>Esercizi su proporzioni e trasformazioni di frazioni.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Statistica di base",
+    "micro": "Media, mediana, moda",
+    "html": "<h3>Statistica descrittiva</h3><p>Calcolo di media, mediana, moda e interpretazione dei dati.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Numeri naturali, interi, razionali, reali",
+    "html": "<h3>Insiemi numerici</h3><p>Definizione e proprietà degli insiemi numerici: naturali, interi, razionali e reali; conversioni e rappresentazioni.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Ordinamento, ordine di grandezza e notazione scientifica",
+    "html": "<h3>Ordinamento e notazione scientifica</h3><p>Confronto di numeri, ordine di grandezza, notazione scientifica e arrotondamenti rilevanti per i calcoli numerici.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Potenze e proprietà (esponente intero e razionale)",
+    "html": "<h3>Potenze</h3><p>Definizione di potenza, proprietà delle potenze con esponente intero e razionale, operazioni e semplificazioni.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Radicali e loro proprietà",
+    "html": "<h3>Radicali</h3><p>Radici n-esime, operazioni con i radicali, razionalizzazione e relazioni con le potenze.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Logaritmi in base 10 e in base e",
+    "html": "<h3>Logaritmi</h3><p>Definizione di logaritmo, proprietà, cambio di base e uso dei logaritmi in base 10 e base e nei calcoli.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Cenni di calcolo combinatorio",
+    "html": "<h3>Calcolo combinatorio</h3><p>Principi di conteggio, permutazioni, combinazioni e variazioni con esempi elementari.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Espressioni algebriche, polinomi e scomposizione",
+    "html": "<h3>Polinomi e scomposizione</h3><p>Espressioni algebriche, operazioni su polinomi, scomposizione in fattori e applicazioni pratiche.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Prodotti notevoli e potenza n-esima del binomio",
+    "html": "<h3>Prodotti notevoli e binomio</h3><p>Prodotti notevoli, formula del binomio di Newton e applicazioni per lo sviluppo e la semplificazione.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Frazioni algebriche",
+    "html": "<h3>Frazioni algebriche</h3><p>Semplificazione, somma, prodotto e divisione di frazioni algebriche; dominio e condizioni di esistenza.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Equazioni e disequazioni di primo e secondo grado",
+    "html": "<h3>Equazioni e disequazioni</h3><p>Risoluzione di equazioni lineari e quadratiche, discriminante, metodo grafico e disequazioni algebriche.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Insiemi numerici e algebra",
+    "micro": "Sistemi di equazioni",
+    "html": "<h3>Sistemi di equazioni</h3><p>Risoluzione di sistemi lineari con sostituzione, confronto e metodo di Cramer per 2x2 e cenni su sistemi più grandi.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Funzioni",
+    "micro": "Nozioni fondamentali e rappresentazione grafica",
+    "html": "<h3>Concetti di funzione</h3><p>Dominio, codominio, immagine; rappresentazione grafica; studio del segno e interpretazione di grafici.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Funzioni",
+    "micro": "Continuità, massimi, minimi, crescenza e decrescenza",
+    "html": "<h3>Studio delle funzioni</h3><p>Concetti qualitativi: continuità, punti di massimo/minimo, monotonia e criteri elementari di analisi.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Funzioni",
+    "micro": "Funzioni elementari: algebriche, esponenziali, logaritmiche, goniometriche",
+    "html": "<h3>Funzioni elementari</h3><p>Panoramica su funzioni polinomiali, razionali, esponenziali, logaritmiche e funzioni goniometriche con esempi.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Funzioni",
+    "micro": "Funzioni composte e inverse",
+    "html": "<h3>Composte e inverse</h3><p>Concetto di composizione, funzione inversa, dominio di definizione e esempi pratici.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Funzioni",
+    "micro": "Equazioni e disequazioni goniometriche",
+    "html": "<h3>Equazioni goniometriche</h3><p>Risoluzione delle principali equazioni e disequazioni trigonometriche e uso delle formule di riduzione.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Poligoni e loro proprietà",
+    "html": "<h3>Poligoni</h3><p>Classificazione dei poligoni, calcolo degli angoli interni, diagonali e proprietà dei poligoni regolari.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Circonferenza e cerchio",
+    "html": "<h3>Circonferenza e cerchio</h3><p>Elementi fondamentali, arco, corda, tangente, area e lunghezza della circonferenza.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Misure di lunghezze, superfici e volumi",
+    "html": "<h3>Misure e unità</h3><p>Formule per perimetri, aree e volumi di figure e solidi elementari; conversioni di unità di misura.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Isometrie, similitudini ed equivalenze nel piano",
+    "html": "<h3>Isometrie e similitudini</h3><p>Trasformazioni rigidhe e similitudini: definizioni, proprietà invarianti e applicazioni ai problemi geometrici.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Luoghi geometrici",
+    "html": "<h3>Luoghi geometrici</h3><p>Concetto di luogo geometrico e risoluzione di semplici problemi che definiscono curve e insiemi di punti.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Misura degli angoli, radianti e funzioni goniometriche",
+    "html": "<h3>Angoli e goniometria</h3><p>Misura in gradi e radianti, definizione di seno, coseno, tangente e valori notevoli; concetti fondamentali.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Formule goniometriche e risoluzione dei triangoli",
+    "html": "<h3>Formule goniometriche</h3><p>Formule di addizione, riduzione e identità; legge dei seni e dei coseni per la risoluzione dei triangoli.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Sistema di riferimento cartesiano e retta",
+    "html": "<h3>Geometria analitica</h3><p>Sistema cartesiano, equazione della retta, condizioni di parallelismo e perpendicolarità, e uso analitico per risolvere problemi.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Distanza, punto medio e distanza punto-retta",
+    "html": "<h3>Distanze e punto medio</h3><p>Formule per la distanza tra due punti, il punto medio e la distanza di un punto da una retta nel piano cartesiano.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Equazioni della circonferenza, parabola, iperbole ed ellisse",
+    "html": "<h3>Coniche</h3><p>Equazioni e rappresentazioni cartesiane di circonferenza, parabola, iperbole ed ellisse con proprietà geometriche essenziali.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Geometria",
+    "micro": "Teorema di Pitagora e teoremi di Euclide",
+    "html": "<h3>Pitagora ed Euclide</h3><p>Enunciato e applicazioni del teorema di Pitagora; teoremi di Euclide (elementi e relazioni nel triangolo rettangolo).</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Probabilità e statistica",
+    "micro": "Distribuzioni delle frequenze e rappresentazioni grafiche",
+    "html": "<h3>Distribuzioni e grafici</h3><p>Classificazione dei caratteri, costruzione di tabelle di frequenza e principali rappresentazioni grafiche (istogrammi, diagrammi a barre, a torta).</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Probabilità e statistica",
+    "micro": "Nozione di esperimento casuale, evento e probabilità",
+    "html": "<h3>Nozioni di probabilità</h3><p>Definizione di esperimento casuale, spazio campionario, eventi, probabilità classica e relative frequenze; eventi semplici e composti.</p>"
+  },
+  {
+    "materia": "Matematica",
+    "macro": "Probabilità e statistica",
+    "micro": "Probabilità e frequenza",
+    "html": "<h3>Probabilità e frequenza</h3><p>Relazione tra probabilità e frequenza osservata, legge dei grandi numeri e esempi pratici di calcolo della probabilità.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Meccanica",
+    "micro": "Kinematica",
+    "html": "<h3>Kinematica</h3><p>Velocità, accelerazione e moto uniforme/accelerato.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettromagnetismo",
+    "micro": "Corrente e circuiti semplici",
+    "html": "<h3>Corrente elettrica</h3><p>Tensione, corrente, resistenza e legge di Ohm.</p>"
+  }
+  ,
+  {
+    "materia": "Fisica",
+    "macro": "Grandezze e misure",
+    "micro": "Grandezze fisiche fondamentali e derivate",
+    "html": "<h3>Grandezze fisiche</h3><p>Grandezze fondamentali e derivate; sistemi di unità (SI e tecnico); multipli e sottomultipli; notazione scientifica.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Grandezze e misure",
+    "micro": "Conversioni e unità",
+    "html": "<h3>Conversioni</h3><p>Conversione tra unità di misura, fattori di conversione e uso corretto delle unità nei calcoli.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Grandezze e misure",
+    "micro": "Scalari e vettoriali, operazioni sui vettori",
+    "html": "<h3>Vettori</h3><p>Distinzione tra grandezze scalari e vettoriali; rappresentazione vettoriale, somma, scomposizione e prodotto scalare/vestrice.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Cinematica",
+    "micro": "Descrizione del moto e parametri",
+    "html": "<h3>Cinematica</h3><p>Descrizione del moto: traiettoria, spostamento, velocità lineare e angolare, accelerazione e accelerazione centripeta.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Cinematica",
+    "micro": "Moti fondamentali",
+    "html": "<h3>Moti</h3><p>Moto rettilineo uniforme, moto uniformemente accelerato, moto circolare uniforme e moto armonico semplice.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Forze e principio di inerzia",
+    "html": "<h3>Forze</h3><p>Concetto di forza come interazione, rappresentazione vettoriale delle forze e principio di inerzia.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Secondo principio della dinamica e massa",
+    "html": "<h3>Secondo principio</h3><p>Legge fondamentale F=ma, definizione di massa inerziale e applicazioni semplici.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Forze comuni: peso, elastica, attrito",
+    "html": "<h3>Forze comuni</h3><p>Forza peso, forza elastica (legge di Hooke), attrito statico e dinamico: modelli e esempi di calcolo.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Terzo principio e conservazione della quantità di moto",
+    "html": "<h3>Interazioni e quantità di moto</h3><p>Terzo principio della dinamica, impulso, quantità di moto e suo principio di conservazione in urti elastici e anelastici.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Momento di una forza, momento angolare, lavoro ed energia",
+    "html": "<h3>Momenti, lavoro e energia</h3><p>Momento di una forza, momento angolare, lavoro, energia cinetica e potenziale; forze conservative e principio di conservazione dell'energia meccanica.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Dinamica",
+    "micro": "Potenza",
+    "html": "<h3>Potenza</h3><p>Definizione di potenza meccanica e calcoli di potenza media e istantanea.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Meccanica dei fluidi",
+    "micro": "Densità, comprimibilità e stati dei fluidi",
+    "html": "<h3>Fluidi</h3><p>Concetti di densità, comprimibilità, differenze tra gas e liquidi e proprietà rilevanti.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Meccanica dei fluidi",
+    "micro": "Idrostatica: pressione e principi fondamentali",
+    "html": "<h3>Idrostatica</h3><p>Pressione nei fluidi, principi di Pascal, Stevino e Archimede con esempi pratici.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Meccanica dei fluidi",
+    "micro": "Dinamica dei fluidi: flusso, portata ed equazione di continuità",
+    "html": "<h3>Dinamica dei fluidi</h3><p>Concetti di flusso, portata, equazione di continuità e introduzione all'equazione di Bernoulli per fluidi ideali.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Meccanica dei fluidi",
+    "micro": "Viscosità e forze viscose nei fluidi reali",
+    "html": "<h3>Viscosità</h3><p>Comportamento dei fluidi reali, attrito interno, numero di Reynolds e effetti della viscosità.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Termodinamica",
+    "micro": "Concetti fondamentali: temperatura, calore e termometri",
+    "html": "<h3>Termodinamica</h3><p>Temperatura, equilibrio termico, scala termometrica e metodi di misura (termometri).</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Termodinamica",
+    "micro": "Calorimetria e capacità termica",
+    "html": "<h3>Calorimetria</h3><p>Calore, capacità termica, calore specifico, misure calorimetriche e problemi di equilibrio termico.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Termodinamica",
+    "micro": "Cambiamenti di stato e calori latenti",
+    "html": "<h3>Cambi di stato</h3><p>Passaggi di stato, calori latenti e diagrammi di stato semplificati.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Termodinamica",
+    "micro": "Leggi dei gas e principi della termodinamica",
+    "html": "<h3>Gas e principi</h3><p>Equazione dei gas perfetti, primo e secondo principio della termodinamica con esempi applicativi.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettricità ed elettromagnetismo",
+    "micro": "Cariche elettriche e legge di Coulomb",
+    "html": "<h3>Cariche elettriche</h3><p>Interazioni tra cariche, legge di Coulomb e concetto di campo elettrico.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettricità ed elettromagnetismo",
+    "micro": "Campo e potenziale elettrico, condensatori",
+    "html": "<h3>Campo e potenziale</h3><p>Concetto di campo e potenziale elettrico, superfici equipotenziali, capacità e condensatori in serie e parallelo.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettricità ed elettromagnetismo",
+    "micro": "Corrente, resistori e legge di Ohm; principi di Kirchhoff",
+    "html": "<h3>Corrente e circuiti</h3><p>Corrente elettrica, resistenza, resistività, legge di Ohm, circuiti in serie e parallelo e principi di Kirchhoff.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettricità ed elettromagnetismo",
+    "micro": "Lavoro, potenza ed effetto Joule; corrente continua e alternata",
+    "html": "<h3>Lavoro e potenza</h3><p>Concetti di lavoro e potenza elettrica, effetto Joule, differenze tra corrente continua e alternata, periodo e frequenza.</p>"
+  },
+  {
+    "materia": "Fisica",
+    "macro": "Elettricità ed elettromagnetismo",
+    "micro": "Campo magnetico e forze su correnti; induzione elettromagnetica",
+    "html": "<h3>Magnetismo e induzione</h3><p>Campo magnetico generato da correnti, forza su conduttori in campo magnetico e fenomeni di induzione elettromagnetica.</p>"
+  }
+]

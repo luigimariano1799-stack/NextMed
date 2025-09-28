@@ -1,0 +1,733 @@
+<!doctype html>
+<!-- =============================================================
+  NextMed — SITO (build desktop) • v1
+  ORGANIZZAZIONE A BLOCCHI NUMERATI (per patch facili)
+  -----------------------------------------------------------------
+  Blocchi principali (numerati):
+   [1] Head & meta
+   [2] Liquid background (SVG + blob)
+   [3] Header (brand)
+   [4] Dock di navigazione (scrollabile)
+   [5] Main: sezioni/pannelli
+   [6] Footer
+   [7] Script principali (app.js)
+  Ogni file CSS/JS ha lo stesso schema con sotto-blocchi: es. [5.1], [5.2]…
+============================================================= -->
+<html lang="it">
+<head>
+  <!-- [1] Head & meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NextMed • Sito</title>
+  <meta name="theme-color" content="#0c0f1e">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="NextMed_Logo.png" />
+  <link rel="apple-touch-icon" href="NextMed_Logo.png" />
+</head>
+<body>
+  <!-- Pagina di ingresso -->
+  <div id="login-overlay" class="overlay" style="display: flex;">
+    <div class="login-modal">
+  <img src="NextMed_Logo.png" alt="Logo NextMed" class="login-logo">
+  <h2>Benvenuto su NextMed!</h2>
+  <p>NextMed è la piattaforma ideale per prepararti al meglio ai test di ammissione per le Professioni Sanitarie.</p>
+      <ul>
+        <li>Accedi a centinaia di domande di allenamento.</li>
+        <li>Segui lezioni interattive e approfondimenti.</li>
+        <li>Simula i test ufficiali per migliorare le tue performance.</li>
+        <li>Monitora i tuoi progressi con report dettagliati.</li>
+      </ul>
+      <p>Accedi ora con il tuo account Google per iniziare!</p>
+      <button class="btn google-login" onclick="loginWithGoogle()">Accedi con Google</button>
+      <button class="btn close-login" onclick="closeLoginOverlay()">✕</button>
+    </div>
+  </div>
+
+  <!-- [2] Liquid background -->
+  <div class="liquid-bg" aria-hidden="true">
+    <svg width="0" height="0">
+      <defs>
+        <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="16" result="blur"/>
+          <feColorMatrix in="blur" mode="matrix"
+           values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="goo"/>
+          <feBlend in="SourceGraphic" in2="goo"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="blobs">
+      <div class="blob" style="left:-15%;top:-10%"></div>
+      <div class="blob b2"></div>
+      <div class="blob b3"></div>
+    </div>
+  </div>
+
+  <!-- [3] Header -->
+  <header class="app-header">
+    <div class="brandbar">
+  <a class="logo" href="#home"><img src="NextMed_Logo.png" alt="NextMed logo"></a>
+      <div class="brand">
+  <strong>NextMed</strong>
+        <span class="muted">Professioni Sanitarie</span>
+      </div>
+      <!-- Aggiunta icona account -->
+      <div class="account-icon">
+        <a href="#account" aria-label="Account">
+          <img id="headerProfileIcon" src="Profilo.png" alt="Profilo" class="icon">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <style>
+    .account-icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    .account-icon .icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+      background-color: var(--card);
+      cursor: pointer;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      font-family: 'Arial', sans-serif;
+      color: var(--text);
+    }
+
+    .login-modal {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      border: 2px solid var(--border);
+    }
+
+    .login-logo {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+
+    .login-modal h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: var(--primary);
+    }
+
+    .login-modal p {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: var(--text-muted);
+    }
+
+    .login-modal ul {
+      text-align: left;
+      margin: 10px 0;
+      padding: 0;
+      list-style: none;
+      color: var(--text-muted);
+    }
+
+    .login-modal ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .login-modal ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+    }
+
+    .google-login {
+      background-color: #4285F4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .google-login:hover {
+      background-color: #357ae8;
+    }
+
+    .close-login {
+      background: none;
+      border: none;
+      font-size: 20px;
+      color: var(--text);
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    /* Stile responsive per la sezione delle lezioni */
+    @media (max-width: 768px) {
+      #lessonMaterie {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #lessonMaterie .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .search-bar {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 16px;
+    }
+  </style>
+
+  <!-- [4] Dock di navigazione (scrollabile) -->
+  <nav class="dock" aria-label="Navigazione">
+    <div class="dock-wrap">
+      <div class="dock-inner" id="dock">
+  <a href="#home" data-tab="home"><span class="icon">🏠</span><span class="lbl">Home</span></a>
+  <a href="#allenamento" data-tab="allenamento" class="active"><span class="icon">🏋️‍♀️</span><span class="lbl">Allenamento</span></a>
+        <a href="#lezioni" data-tab="lezioni"><span class="icon">📚</span><span class="lbl">Lezioni</span></a>
+        <a href="#simulazioni" data-tab="simulazioni"><span class="icon">🧪</span><span class="lbl">Simulazione</span></a>
+        <a href="#report" data-tab="report"><span class="icon">📈</span><span class="lbl">Report</span></a>
+        <a href="#settings" data-tab="settings"><span class="icon">⚙️</span><span class="lbl">Impostazioni</span></a>
+      </div>
+  </div>
+</nav>
+
+  <!-- [5] Main: sezioni/pannelli -->
+  <main id="view">
+
+  <!-- Confirm modal (global) -->
+  <div id="confirmModal" class="modal" aria-hidden="true" style="display:none">
+    <div class="backdrop"></div>
+    <div class="dialog">
+      <h3 id="confirmTitle">Conferma</h3>
+      <p id="confirmMessage">Sei sicuro?</p>
+      <div class="actions">
+        <button id="confirmCancel" class="btn" type="button">Annulla</button>
+        <button id="confirmOk" class="btn primary" type="button">Conferma</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- [5.0] Home -->
+  <section id="home" class="panel fade-in">
+    <div class="section-header">
+  <h1>Benvenuto su NextMed</h1>
+      <p class="sub">Preparati alle prove per le Professioni Sanitarie: esercitazioni, lezioni e simulazioni strutturate.</p>
+    </div>
+    <div class="card glass">
+      <h2>Panoramica</h2>
+      <p class="small">Questa pagina raccoglie collegamenti rapidi e statistiche per cominciare:</p>
+      <div class="btnrow">
+        <button id="goToAllenamento" class="btn primary">Vai a Esercitazioni</button>
+        <button id="goToSimulazioni" class="btn">Vai a Simulazioni</button>
+        <button id="goToLezioni" class="btn">Vai a Lezioni</button>
+      </div>
+      <hr class="divider">
+      <div id="homeQuickStats" class="small">Caricamento statistiche...</div>
+    </div>
+  </section>
+
+  <!-- [5.1] Allenamento -->
+<section id="allenamento" class="panel active fade-in">
+  <div class="section-header">
+    <h1>Esercitazioni</h1>
+    <p class="sub">Scegli una modalità: rapida, per argomento, oppure rivedi gli errori.</p>
+  </div>
+
+<!-- CARD 1 — Esercitazione rapida -->
+<div class="card glass" id="pControls">
+  <h2>Esercitazione rapida</h2>
+  <p class="small">Scegli la materia, quante domande e la durata.</p>
+    <div class="filters">
+    <label>Materia
+      <select id="quickMateria" class="styled-select"></select>
+    </label>
+    <label>Numero di domande
+      <button id="quickCountBtn" class="btn" type="button" data-value="12">12</button>
+    </label>
+    <label>Durata (min)
+      <button id="quickMinutesBtn" class="btn" type="button" data-value="20">20</button>
+    </label>
+  </div>
+  <div class="btnrow">
+    <button id="startQuick" class="btn primary" type="button">Avvia rapida</button>
+  </div>
+</div>
+
+<!-- CARD 2 — Test per argomento -->
+<div class="card glass">
+  <h2>Test per argomento</h2>
+  <p class="small">Seleziona materia → argomento → numero di domande.</p>
+    <div class="filters">
+    <label>Materia
+      <select id="topicMateria" class="styled-select"></select>
+    </label>
+    <label>Argomento
+      <select id="topicArgomento" class="styled-select"></select>
+    </label>
+    <label>Numero di domande
+      <button id="topicCountBtn" class="btn" type="button" data-value="12">12</button>
+    </label>
+  </div>
+  <div class="btnrow">
+    <button id="startByTopic" class="btn primary" type="button">Avvia per argomento</button>
+  </div>
+</div>
+
+  <!-- CARD 3 — Controlla i tuoi errori -->
+  <div class="card glass">
+    <h2>Controlla i tuoi errori</h2>
+    <p class="small">Ripassa solo le domande che hai sbagliato, filtrando per materia.</p>
+    <div class="filters">
+      <label>Materia
+          <select id="errorsMateria" class="styled-select"></select>
+        </label>
+    </div>
+    <div class="btnrow">
+      <button id="startErrors" class="btn primary" type="button">Rivedi errori</button>
+      <button id="clearErrors" class="btn" type="button" title="Svuota l’archivio errori per questa materia">Svuota errori</button>
+    </div>
+  </div>
+</section>
+<!-- end [5.1] -->
+
+<!-- [5.10] Esercitazione in corso -->
+<section id="practice-run" class="panel fade-in">
+
+  <!-- Bottone fuori dal box -->
+  <div class="btnrow" style="margin-bottom:10px;">
+    <button id="backToTraining" class="btn" type="button">← Torna a Esercitazioni</button>
+    <button id="backToHomeFromPractice" class="btn" type="button">🏠 Home</button>
+    <button id="endPractice" class="btn danger" type="button" style="margin-left:auto;">Termina allenamento</button>
+  </div>
+
+  <!-- Header compatto con titolo + timer -->
+  <div class="practice-head glass">
+    <div class="head-info">
+      <div id="pMode" class="pill">-</div>
+      <div id="pMateria" class="small"></div>
+    </div>
+
+    <!-- Timer circolare -->
+    <div id="pTimerWidget" class="timer-badge" aria-label="Timer">
+      <svg viewBox="0 0 100 100" class="ring">
+        <circle class="bg" cx="50" cy="50" r="44"></circle>
+        <circle class="fg" id="pTimerProgress" cx="50" cy="50" r="44"></circle>
+      </svg>
+      <div class="time" id="pTimerText">--:--</div>
+    </div>
+  </div>
+
+  <!-- Area domande -->
+  <div id="pRunArea" class="card"></div>
+</section>
+<!-- end [5.10] -->
+
+
+  <!-- [5.11] Account -->
+  <section id="account" class="panel fade-in">
+    <div class="section-header">
+      <h1>Account</h1>
+      <p class="sub">Riepilogo profilo, attività e azioni rapide.</p>
+    </div>
+    <div class="card glass">
+      <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap;">
+  <div id="accAvatar" class="avatar" title="Cambia immagine profilo">
+    <img src="Profilo.png" alt="Profilo">
+    <span class="avatar-add" aria-hidden="true">+</span>
+  </div>
+        <div>
+          <div id="accName" style="font-weight:600; font-size:1.1em;">Ospite</div>
+          <div id="accEmail" class="small muted">–</div>
+        </div>
+        <div style="margin-left:auto; display:flex; gap:8px; flex-wrap:wrap;">
+          <button id="accEditProfile" class="btn">Modifica profilo</button>
+          <button id="accGoToReports" class="btn">Vai ai report</button>
+          <button id="accExport" class="btn">Esporta dati</button>
+          <button id="accClear" class="btn" style="color:var(--err); border:1px solid var(--border);">Cancella dati locali</button>
+        </div>
+      </div>
+      <!-- Hidden file input for avatar upload -->
+      <input id="accAvatarFile" type="file" accept="image/*" style="display:none" />
+      <hr class="divider">
+      <div id="accStats" class="kpis" style="display:flex; gap:12px; flex-wrap:wrap;"></div>
+    </div>
+
+    <div class="card glass">
+      <h2>Attività recente</h2>
+      <div id="accReports" class="report-list" style="display:flex; flex-direction:column; gap:12px;"></div>
+    </div>
+
+    <style>
+  .avatar { width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; background: var(--card); border:1px solid var(--border); font-size:26px; overflow:hidden; position:relative; cursor:pointer; }
+  .avatar img { width:100%; height:100%; object-fit:cover; display:block; }
+  .avatar .avatar-add{
+    position:absolute; top:50%; left:50%; transform: translate(-50%, -50%) scale(.92);
+    width:24px; height:24px; border-radius:50%;
+    background: var(--primary); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px;
+    border:2px solid var(--card); box-shadow: 0 2px 6px rgba(0,0,0,.25);
+    line-height:1; user-select:none; pointer-events:none; /* l'intero avatar resta cliccabile */
+    opacity:0; transition: opacity .15s ease, transform .15s ease;
+  }
+  .avatar:hover .avatar-add{ opacity:1; transform: translate(-50%, -50%) scale(1); }
+    </style>
+  </section>
+  <!-- end [5.11] -->
+
+
+
+
+    <!-- [5.2] Lezioni (lista materie) -->
+    <section id="lezioni" class="panel fade-in">
+      <div class="section-header">
+        <h1>Lezioni</h1>
+        <!-- Barra di ricerca -->
+        <div class="search-bar" style="margin-top: 20px;">
+          <input type="text" id="searchInput" placeholder="Ricerca materia" oninput="filterLessons()">
+        </div>
+        <!-- <p class="sub">Naviga: <b>Materia → Macroargomento → Micro-argomento</b>. Ogni micro apre una pagina dedicata.</p> -->
+      </div>
+      <div class="card glass">
+        <h2>Materie</h2>
+        <ul id="lessonMaterie" class="list grid">
+          <!-- Materie esistenti -->
+          <li>
+            <a href="#biologia" class="btn">Biologia</a>
+          </li>
+          <li>
+            <a href="#chimica" class="btn">Chimica</a>
+          </li>
+          <li>
+            <a href="#matematica" class="btn">Matematica</a>
+          </li>
+          <li>
+            <a href="#fisica" class="btn">Fisica</a>
+          </li>
+          <!-- Materie aggiunte sotto -->
+          <li>
+            <a href="#comprensione-e-cultura" class="btn">Comprensione e Cultura</a>
+          </li>
+          <li>
+            <a href="#logica" class="btn">Logica</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <style>
+      .search-bar {
+        margin-bottom: 15px;
+        text-align: center;
+      }
+
+      .search-bar input {
+        width: 80%;
+        padding: 10px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        font-size: 16px;
+      }
+    </style>
+
+    <script>
+      function filterLessons() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const lessons = document.querySelectorAll('#lessonMaterie li');
+
+        lessons.forEach(lesson => {
+          const text = lesson.textContent.toLowerCase();
+          lesson.style.display = text.includes(input) ? '' : 'none';
+        });
+      }
+    </script>
+
+    <!-- [5.3] Lezioni (macro) -->
+    <section id="lezioni-materia" class="panel fade-in">
+      <div class="card glass">
+        <!-- Barra di ricerca per argomenti -->
+        <div class="search-bar" style="margin-bottom: 15px;">
+          <input type="text" id="searchMacroInput" placeholder="Ricerca argomento" oninput="filterMacroLessons()">
+        </div>
+        <div class="btnrow"><button class="btn" id="backToMaterie" type="button">← Torna a Materie</button></div>
+        <h2 id="materiaTitle">Materia</h2>
+        <ul id="macroList" class="list grid"></ul>
+      </div>
+    </section>
+
+    <!-- [5.4] Lezioni (micro) -->
+    <section id="lezioni-argomento" class="panel fade-in">
+      <div class="card glass">
+        <!-- Barra di ricerca per sottoargomenti -->
+        <div class="search-bar" style="margin-bottom: 15px;">
+          <input type="text" id="searchMicroInput" placeholder="Ricerca sottoargomento" oninput="filterMicroLessons()">
+        </div>
+        <div class="btnrow"><button class="btn" id="backToMacro" type="button">← Torna a Argomenti</button></div>
+        <h2 id="macroTitle">Argomento</h2>
+        <ul id="microList" class="list"></ul>
+      </div>
+    </section>
+
+    <script>
+      function filterMacroLessons() {
+        const input = document.getElementById('searchMacroInput').value.toLowerCase();
+        const lessons = document.querySelectorAll('#macroList li');
+
+        lessons.forEach(lesson => {
+          const text = lesson.textContent.toLowerCase();
+          lesson.style.display = text.includes(input) ? '' : 'none';
+        });
+      }
+
+      function filterMicroLessons() {
+        const input = document.getElementById('searchMicroInput').value.toLowerCase();
+        const lessons = document.querySelectorAll('#microList li');
+
+        lessons.forEach(lesson => {
+          const text = lesson.textContent.toLowerCase();
+          lesson.style.display = text.includes(input) ? '' : 'none';
+        });
+      }
+    </script>
+
+    <!-- [5.5] Lezione dettaglio -->
+    <section id="lezione-dettaglio" class="panel fade-in">
+      <div class="card">
+        <div class="btnrow"><button class="btn" id="backToMicro" type="button">← Torna alla lista</button> <button id="backToHomeFromLesson" class="btn" type="button">🏠 Home</button></div>
+        <h2 id="lessonTitle" class="lesson-title"></h2>
+        <div id="lessonMeta" class="small"></div>
+        <hr class="divider">
+        <article id="lessonBody" class="lesson-body"></article>
+      </div>
+    </section>
+
+    <!-- [5.6] Simulazioni (landing) -->
+    <section id="simulazioni" class="panel fade-in">
+      <div class="section-header">
+        <h1>Simulazioni</h1>
+       <!-- <p class="sub">Ordine ufficiale: Comprensione & Cultura → Logica → Biologia → Chimica → Matematica → Fisica.</p> -->
+      </div>
+      <div class="card glass">
+        <h2>Demo strutturata per materia</h2>
+        <div class="btnrow"><button id="startSim" class="btn primary" type="button">Avvia simulazione</button></div>
+      </div>
+    </section>
+
+    <!-- [5.7] Simulazione in corso -->
+    <section id="sim-run" class="panel fade-in">
+      <div class="btnrow" style="margin-bottom:8px;">
+        <button id="backToHomeFromSim" class="btn" type="button">🏠 Torna a Home</button>
+      </div>
+      <div class="card glass">
+        <div class="kpis">
+          <div class="kpi">Tempo: <b id="timer">--:--</b></div>
+          <div class="kpi">Materia: <b id="simSubjLabel">-</b></div>
+        </div>
+        <div class="segbar" id="segbar"></div>
+        <div class="subj-buttons" id="subjBtns"></div>
+      </div>
+      <div id="simArea" class="card"></div>
+    </section>
+
+    <!-- [5.8] Report -->
+    <section id="report" class="panel fade-in">
+      <div class="section-header">
+        <h1>Report</h1>
+        <p class="sub">Storico locale sul dispositivo.</p>
+      </div>
+      <div id="reportArea" class="card glass"><p>Ancora nessun dato…</p></div>
+    </section>
+
+    <!-- [5.9] Impostazioni -->
+    <section id="settings" class="panel fade-in">
+      <div class="section-header">
+        <h1>Impostazioni</h1>
+        <p class="sub">Preferenze locali (salvate su questo dispositivo).</p>
+      </div>
+      <div class="card glass">
+        <h3>Simulazione</h3>
+        <div class="filters">
+          <label>Durata (minuti)
+            <input id="settDuration" type="number" min="10" max="200" step="5" value="100">
+          </label>
+          <label>Punteggio corrette (+)
+            <input id="settScoreRight" type="number" step="0.1" value="1.5">
+          </label>
+          <label>Penalità errate (−)
+            <input id="settScoreWrong" type="number" step="0.1" value="0.4">
+          </label>
+        </div>
+          <div class="filters" style="margin-top:12px;">
+            <label>Tema
+              <select id="settTheme"><option value="auto">Automatico</option><option value="light">Chiaro</option><option value="dark">Scuro</option></select>
+            </label>
+            <label>Suoni
+              <select id="settSounds"><option value="1">Attivi</option><option value="0">Disattivati</option></select>
+            </label>
+            <label>Auto-advance dopo risposta (s)
+              <input id="settAutoAdvance" type="number" min="0" max="10" step="1" value="0">
+            </label>
+            <label>Avviso timer residuo (min)
+              <input id="settWarnTimer" type="number" min="0" max="30" step="1" value="5">
+            </label>
+          </div>
+          <div class="btnrow" style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;">
+            <button id="saveSettings" class="btn primary" type="button">Salva impostazioni</button>
+            <button id="exportSettings" class="btn" type="button">Esporta impostazioni</button>
+            <input id="importSettingsFile" type="file" accept="application/json" style="display:none;">
+            <button id="importSettings" class="btn" type="button">Importa impostazioni</button>
+            <button id="resetSettings" class="btn" type="button" style="color:var(--err);border:1px solid var(--border);">Reset impostazioni</button>
+          </div>
+          <p class="small">Nella demo le quote per materia sono ridotte; l'ordine e il timer rispettano queste impostazioni.</p>
+      </div>
+      <div class="card glass">
+        <h3>Profilo</h3>
+        <div class="filters">
+          <label>Nome
+            <input id="profileName" type="text" placeholder="Es. Mario">
+          </label>
+          <label>Cognome
+            <input id="profileSurname" type="text" placeholder="Es. Rossi">
+          </label>
+          <label>Email
+            <input id="profileEmail" type="email" placeholder="esempio@mail.com">
+          </label>
+          <label>Salva su cloud (placeholder)
+            <select id="profileCloud"><option value="0">No</option><option value="1">Sì (richiede setup)</option></select>
+          </label>
+        </div>
+        <div class="btnrow">
+          <button id="saveProfile" class="btn primary">Salva profilo</button>
+        </div>
+        <p class="small">I dati del profilo sono salvati localmente. L'integrazione cloud sarà implementata in seguito.</p>
+        <div style="margin-top:10px;">
+          <p class="small">Accedi con Google per sincronizzare il profilo (richiede Client ID).</p>
+          <!-- Google Identity Services: il clientId va configurato nelle impostazioni server-side o come variabile d'ambiente -> TODO -->
+          <script src="https://accounts.google.com/gsi/client" async defer></script>
+          <div id="g_id_onload" data-client_id="" data-login_uri="" data-auto_prompt="false"></div>
+          <div id="googleSignBtn" style="margin-top:8px;"></div>
+          <div class="btnrow" style="margin-top:8px;">
+            <button id="googleDisconnect" class="btn" style="display:none;">Disconnetti Google</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+    <!-- [5.X] Banca domande -->
+    <section id="banca" class="panel fade-in">
+      <div class="card">
+        <h1>Banca domande</h1>
+        <p class="sub">Ricerca, filtra, aggiungi nuove domande (solo locale) e esporta.</p>
+        <div class="filters">
+          <label>Materia
+            <select id="bankMateria" class="styled-select"></select>
+          </label>
+          <label>Argomento
+            <select id="bankArgomento" class="styled-select"></select>
+          </label>
+          <label>Difficoltà ≥
+            <input id="bankDiff" type="number" min="1" max="5" value="1">
+          </label>
+          <label>Testo contiene
+            <input id="bankQuery" type="search" placeholder="parole chiave">
+          </label>
+          <button id="bankRefresh" class="btn">Aggiorna</button>
+        </div>
+        <div class="actions" style="display:flex; gap:10px; flex-wrap:wrap; margin:10px 0 16px;">
+          <input id="bankFile" type="file" accept=".json" style="display:none;">
+          <button id="bankImport" class="btn primary">Aggiungi domande (JSON)</button>
+          <button id="bankExport" class="btn">Esporta JSON</button>
+          <button id="bankClear" class="btn" style="color:var(--err); border:1px solid var(--border);">Svuota banca locale</button>
+        </div>
+        <div id="bankStats" class="small muted"></div>
+        <div id="bankList" class="list" style="max-height:50vh; overflow:auto;"></div>
+      </div>
+    </section>
+    
+  <!-- [6] Footer -->
+  <footer class="app-footer glass">
+  <small>NextMed — Build desktop v1 </small>
+  </footer>
+
+  <!-- [7] Script principali -->
+  <!-- Embedded fallback data for file:// or missing server (used by qdb.js when fetch fails) -->
+  <script>
+    window.PS_PREP_EMBEDDED_MANIFEST = {
+      materie: {
+        "Biologia": ["questions/biologia-1.json"],
+        "Chimica": ["questions/chimica-1.json"],
+        "Comprensione e Cultura": ["questions/comprensione-1.json"],
+        "Fisica": ["questions/fisica-1.json"],
+        "Logica e Problem Solving": ["questions/logica-1.json"],
+        "Matematica": ["questions/matematica-1.json"]
+      }
+    };
+    window.PS_PREP_EMBEDDED_DATA = {
+      "Biologia": [
+        {"id":"bio-1","materia":"Biologia","argomento":"Membrana","stem":"Qual è il principale componente della membrana cellulare?","options":[{"k":"A","t":"Lipidi","correct":true},{"k":"B","t":"Carboidrati"}],"solution":"La membrana è composta principalmente da un doppio strato fosfolipidico."}
+      ],
+      "Logica e Problem Solving": [
+        {"id":"log-1","materia":"Logica e Problem Solving","argomento":"Proporzioni","stem":"Se 3 quaderni costano 6€, quanto costano 5 quaderni?","options":[{"k":"A","t":"10€","correct":true},{"k":"B","t":"9€"}],"solution":"3->6€, quindi 1->2€; 5->10€."}
+      ],
+      "Comprensione e Cultura": [
+        {"id":"cc-1","materia":"Comprensione e Cultura","argomento":"Inferenze","stem":"Se il testo dice che piove e la strada è bagnata, è corretto inferire che la strada è bagnata?","options":[{"k":"A","t":"Sì","correct":true},{"k":"B","t":"No"}],"solution":"Sì, se il testo dichiara pioggia, è coerente inferire strada bagnata."}
+      ],
+      "Chimica": [
+        {"id":"ch-1","materia":"Chimica","argomento":"Acido-base","stem":"Qual è la formula di Henderson-Hasselbalch?","options":[{"k":"A","t":"pH = pKa + log([A-]/[HA])","correct":true},{"k":"B","t":"pOH = pKb + log([B+]/[BOH])"}],"solution":"pH = pKa + log([A-]/[HA])."}
+      ],
+      "Matematica": [
+        {"id":"m-1","materia":"Matematica","argomento":"Equazioni","stem":"Risolvi: 2x+4=10","options":[{"k":"A","t":"x=3","correct":true},{"k":"B","t":"x=2"}],"solution":"2x+4=10 => 2x=6 => x=3."}
+      ],
+      "Fisica": [
+        {"id":"f-1","materia":"Fisica","argomento":"Lenti","stem":"Formula lenti sottili: 1/f = 1/p + 1/q. Se p=20 e q=30, qual è f?","options":[{"k":"A","t":"12","correct":false},{"k":"B","t":"12/5","correct":true}],"solution":"1/f = 1/20 + 1/30 = (3+2)/60 = 5/60 => f=60/5=12; se l'unità è m riscrivere il valore adeguatamente."}
+      ]
+    };
+  </script>
+  <script src="assets/js/qdb.js"></script>
+  <script src="assets/js/app.js"></script>
+  <!-- floating end simulation button (bottom-right) removed; inline end button remains in the question UI -->
+  <script>
+    function loginWithGoogle() {
+      alert('Funzione Accedi con Google non ancora implementata.');
+    }
+
+    function closeLoginOverlay() {
+      document.getElementById('login-overlay').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
