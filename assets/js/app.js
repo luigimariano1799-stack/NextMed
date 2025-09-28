@@ -53,6 +53,47 @@ const CLOUD = {
   loaded: false,
   _queue: Promise.resolve(),
   _lastToken: null,
+  _OUTBOX_KEY: 'nextmed_cloud_outbox',
+  _stashOffline(partial){
+    try{
+      const cur = JSON.parse(localStorage.getItem(this._OUTBOX_KEY) || '{}');
+      // Merge shallow: per settings/errors sovrascrive, per reports tiene l'array più lungo
+      if(partial && typeof partial === 'object'){
+        if('settings' in partial) cur.settings = partial.settings || {};
+        if('errors' in partial) cur.errors = partial.errors || {};
+        if('reports' in partial){
+          const existing = Array.isArray(cur.reports) ? cur.reports : [];
+          const incoming = Array.isArray(partial.reports) ? partial.reports : [];
+          // preferisci l'array più recente (incoming) mantenendo max 250
+          cur.reports = (incoming.length >= existing.length ? incoming : existing).slice(0,250);
+        }
+      }
+      localStorage.setItem(this._OUTBOX_KEY, JSON.stringify(cur));
+    }catch(_){/* ignore */}
+  },
+  async flushOutbox(){
+    try{
+      const raw = localStorage.getItem(this._OUTBOX_KEY);
+      if(!raw) return { ok:true };
+      const data = JSON.parse(raw);
+      // invia solo campi presenti
+      const payload = {};
+      if(data.settings) payload.settings = data.settings;
+      if(data.errors) payload.errors = data.errors;
+      if(Array.isArray(data.reports)) payload.reports = data.reports;
+      if(Object.keys(payload).length===0){ localStorage.removeItem(this._OUTBOX_KEY); return { ok:true };
+      }
+      const t = await this.token();
+      const r = await fetch('/.netlify/functions/user-data', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+        body: JSON.stringify(payload)
+      });
+      if(r.ok){ localStorage.removeItem(this._OUTBOX_KEY); return { ok:true };
+      }
+      return { ok:false };
+    }catch(e){ return { ok:false, error:String(e) }; }
+  },
   async token(){
     try{
       const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
@@ -79,7 +120,11 @@ const CLOUD = {
       if('reports' in partial) this.doc.reports = Array.isArray(partial.reports) ? partial.reports : [];
       if('errors' in partial) this.doc.errors = partial.errors || {};
     }
-    if(!this.isLoggedIn()) return { ok:true, offline:true };
+    if(!this.isLoggedIn()){
+      // Stash in outbox per flush successivo quando l'utente si autentica
+      this._stashOffline(partial||{});
+      return { ok:true, offline:true };
+    }
 
     const run = async()=>{
       const t = await this.token();
@@ -150,9 +195,11 @@ function saveReport(entry){
   const withTs = { ...entry, ts: entry && entry.ts ? entry.ts : Date.now() };
   arr.unshift(withTs);
   // Enqueue salvataggio e forza un flush immediato in background
-  return CLOUD.save({ reports: arr.slice(0,250) }).then(()=>{
+  return CLOUD.save({ reports: arr.slice(0,250) }).then(async ()=>{
     // Best-effort flush (non blocca la UI)
     try{ setTimeout(()=>{ CLOUD.flush(); }, 0); }catch(_){/* ignore */}
+    // ricarica doc per riflettere eventuale merge lato server
+    try{ await CLOUD.load(); }catch(_){ }
   });
 }
 
@@ -295,7 +342,7 @@ async function handleHash(){
 window.addEventListener("hashchange", ()=>{ (async()=>{ try{ await handleHash(); }catch(_){/* no-op */} })(); });
 window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); /* settings/UI aggiornati dopo CLOUD.load() */ (async()=>{ try{ await handleHash(); }catch(_){/* no-op */} })(); });
 // Ensure lessons and cloud are loaded before initial render
-window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); try{ await handleHash(); }catch(_){/* no-op */} });
+window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.flushOutbox(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); try{ await handleHash(); }catch(_){/* no-op */} });
 
 // Auth guard: blocca l'uso del sito finché non si è autenticati
 function requireAuth(){
@@ -1620,6 +1667,7 @@ const SIM_RULES_2025 = {
           try{ await id.logout(); }catch(_){ /* no-op */ }
           user = null;
         }
+        await CLOUD.flushOutbox();
         await CLOUD.load();
         const s = mapIdentityUserToProfile(user);
         if(user){ setSessionCookie(); saveSettingsObj(s); }
@@ -1629,6 +1677,7 @@ const SIM_RULES_2025 = {
         try{ await handleHash(); }catch(_){}
       });
       id.on('login', async user => {
+        await CLOUD.flushOutbox();
         await CLOUD.load();
         const s = mapIdentityUserToProfile(user);
         await CLOUD.save({ settings: s });
@@ -1639,6 +1688,7 @@ const SIM_RULES_2025 = {
       id.on('logout', async () => {
         clearSessionCookie();
         mapIdentityUserToProfile(null);
+        await CLOUD.flushOutbox();
         await CLOUD.load();
         loadSettingsUI(); renderAccount(); requireAuth();
         try{ await handleHash(); }catch(_){}
