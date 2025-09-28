@@ -1555,9 +1555,24 @@ const SIM_RULES_2025 = {
       // Inizializza e verifica stato
       id.init();
 
-      // Bottone email login
+      // Bottone email login: apri widget e nascondi overlay per evitare sovrapposizioni
       const emailBtn = document.getElementById('btnEmailLogin');
-      if(emailBtn){ emailBtn.addEventListener('click', ()=> id.open()); }
+      if(emailBtn){
+        emailBtn.addEventListener('click', ()=>{
+          // Nascondi overlay custom mentre è visibile il widget Identity
+          const ov = document.getElementById('login-overlay');
+          if(ov) ov.style.display='none';
+          id.open();
+        });
+      }
+
+      // Quando il widget si chiude senza login, ripristina overlay
+      id.on('close', ()=>{
+        if(!id.currentUser()){
+          const ov = document.getElementById('login-overlay');
+          if(ov) ov.style.display='flex';
+        }
+      });
     } else {
       console.warn('Netlify Identity widget non presente');
     }

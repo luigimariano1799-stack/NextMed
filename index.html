@@ -109,10 +109,16 @@
       display: none;
       justify-content: center;
       align-items: center;
-      z-index: 1000;
+        z-index: 1000; /* Keeping the original z-index */
+        pointer-events: auto; /* Enable pointer events for the overlay */
       font-family: 'Arial', sans-serif;
       color: var(--text);
     }
+
+      /* Assicura che il widget Netlify Identity stia sopra il layout quando aperto */
+      .netlify-identity-widget, .netlify-identity-modal {
+        z-index: 2000 !important; /* Ensure the identity widget is above other elements */
+      }
 
     .login-modal {
       background: var(--card);
