@@ -47,21 +47,65 @@ function showConfirmModal(opts){
   });
 }
 
+// Cloud adapter (Netlify Functions + Identity). Elimina il salvataggio locale.
+const CLOUD = {
+  doc: { settings:{}, reports:[], errors:{} },
+  loaded: false,
+  async token(){
+    try{ const u = window.netlifyIdentity && window.netlifyIdentity.currentUser(); return u ? await u.jwt() : null; }catch(_){ return null; }
+  },
+  isLoggedIn(){ return !!(window.netlifyIdentity && window.netlifyIdentity.currentUser()); },
+  async load(){
+    // Se non loggato, mantieni doc vuoto in memoria
+    if(!this.isLoggedIn()){ this.loaded=true; return this.doc; }
+    const t = await this.token();
+    try{
+      const r = await fetch('/.netlify/functions/user-data', { headers: t? { Authorization: 'Bearer '+t } : {} });
+      if(r.ok){ this.doc = await r.json(); this.loaded = true; return this.doc; }
+    }catch(_){/* ignore */}
+    this.loaded = true; return this.doc;
+  },
+  async save(partial){
+    // Merge in memoria
+    if(partial && typeof partial === 'object'){
+      if('settings' in partial) this.doc.settings = partial.settings || {};
+      if('reports' in partial) this.doc.reports = Array.isArray(partial.reports) ? partial.reports : [];
+      if('errors' in partial) this.doc.errors = partial.errors || {};
+    }
+    if(!this.isLoggedIn()) return { ok:true, offline:true };
+    const t = await this.token();
+    const r = await fetch('/.netlify/functions/user-data', {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+      body: JSON.stringify(partial||{})
+    });
+    return { ok: r.ok };
+  },
+  async clearAll(){
+    this.doc = { settings:{}, reports:[], errors:{} };
+    if(!this.isLoggedIn()) return { ok:true, offline:true };
+    const t = await this.token();
+    const r = await fetch('/.netlify/functions/user-data', { method: 'DELETE', headers: t? { Authorization: 'Bearer '+t } : {} });
+    return { ok: r.ok };
+  }
+};
+
 function getSettings(){
   const def={duration:100,right:1.5,wrong:0.4, theme:'dark', sounds:1, autoAdvance:0, warnTimer:5, profile:{}};
-  try{ return {...def, ...(JSON.parse(localStorage.getItem("psprep_settings")||"{}"))}; }catch(_){return def;}
+  try{ return { ...def, ...(CLOUD.doc.settings||{}) }; }catch(_){ return def; }
 }
-function saveSettingsObj(o){ localStorage.setItem("psprep_settings", JSON.stringify(o)); }
+function saveSettingsObj(o){ CLOUD.save({ settings: o }); }
 
+function getReports(){ return Array.isArray(CLOUD.doc.reports) ? CLOUD.doc.reports : []; }
 function saveReport(entry){
-  const key="psprep_reports_v1"; const arr=JSON.parse(localStorage.getItem(key)||"[]");
-  arr.unshift({...entry, ts:Date.now()}); localStorage.setItem(key, JSON.stringify(arr.slice(0,250)));
+  const arr = getReports().slice();
+  arr.unshift({ ...entry, ts: Date.now() });
+  CLOUD.save({ reports: arr.slice(0,250) });
 }
 
 /* Archivio errori (per materia) */
-const ERRKEY = "psprep_errors_v1";  // { [materia]: [questionId,...] }
-function getErrorsMap(){ try{return JSON.parse(localStorage.getItem(ERRKEY)||"{}");}catch(_){return{};} }
-function setErrorsMap(map){ localStorage.setItem(ERRKEY, JSON.stringify(map)); }
+function getErrorsMap(){ try{return CLOUD.doc.errors || {}; }catch(_){ return {}; } }
+function setErrorsMap(map){ CLOUD.save({ errors: map||{} }); }
 function storeError(materia, qid){
   const map = getErrorsMap(); if(!map[materia]) map[materia]=[];
   if(!map[materia].includes(qid)) map[materia].unshift(qid);
@@ -140,7 +184,7 @@ function handleHash(){
 
   // Mostra la lista completa dei report con filtri
   function renderReportList(tipo){
-    const arr = JSON.parse(localStorage.getItem("psprep_reports_v1") || "[]");
+  const arr = getReports();
     const el = $("#reportArea");
     const reports = tipo === 'Simulazione' ? arr.filter(r => r.mode === 'Simulazione') : arr.filter(r => r.mode !== 'Simulazione');
 
@@ -186,9 +230,9 @@ function handleHash(){
   }
 }
 window.addEventListener("hashchange", handleHash);
-window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); loadSettingsUI(); applyTheme(); handleHash(); });
-// Ensure lessons are loaded before initial render
-window.addEventListener("load", async ()=>{ await loadLessons(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); handleHash(); });
+window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); /* settings/UI aggiornati dopo CLOUD.load() */ handleHash(); });
+// Ensure lessons and cloud are loaded before initial render
+window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); handleHash(); });
 
 // --- Home page render ---
 function renderHome(){
@@ -199,7 +243,7 @@ function renderHome(){
     const counts = {};
     for(const m of mats){ const pool = await qdb.getMateria(m); counts[m]= (pool||[]).length; }
     const stats = Object.keys(counts).map(m=>`${m}: ${counts[m]} domande`).join(' • ');
-    const reports = JSON.parse(localStorage.getItem('psprep_reports_v1')||'[]');
+  const reports = getReports();
     const last = reports[0] ? `${reports[0].mode} — ${reports[0].overall.correct}/${reports[0].overall.total} corrette` : 'Nessun report disponibile';
     const node = document.getElementById('homeQuickStats'); if(node) node.innerHTML = `<div>${stats}</div><div style="margin-top:6px;">Ultimo risultato: ${last}</div>`;
   });
@@ -1031,9 +1075,13 @@ $("#importSettingsFile")?.addEventListener('change', async (ev)=>{
 });
 
 // Reset impostazioni (torna ai default)
-$("#resetSettings")?.addEventListener('click', ()=>{
+$("#resetSettings")?.addEventListener('click', async ()=>{
   if(!confirm('Ripristinare le impostazioni predefinite?')) return;
-  localStorage.removeItem('psprep_settings'); loadSettingsUI(); alert('Impostazioni NextMed ripristinate.');
+  // Solo reset delle impostazioni lasciando intatti report/errori
+  const current = { ...CLOUD.doc };
+  current.settings = {};
+  await CLOUD.save({ settings: {} });
+  loadSettingsUI(); alert('Impostazioni ripristinate.');
 });
 
 // Save profile
@@ -1076,7 +1124,7 @@ function renderAccount(){
   if(prof.avatar){ if(accAvatar) accAvatar.src = prof.avatar; if(headerIcon) headerIcon.src = prof.avatar; }
 
   // KPI rapidi: numero report, ultime corrette, errori salvati
-  const reports = JSON.parse(localStorage.getItem('psprep_reports_v1')||'[]');
+  const reports = getReports();
   const totalReports = reports.length;
   const last = reports[0] || null;
   const errMap = getErrorsMap(); const totalErrors = Object.values(errMap).reduce((s,a)=>s + (Array.isArray(a)?a.length:0), 0);
@@ -1191,7 +1239,7 @@ function renderAccount(){
   document.getElementById('accExport')?.addEventListener('click', ()=>{
     const data = {
       settings: getSettings(),
-      reports: JSON.parse(localStorage.getItem('psprep_reports_v1')||'[]'),
+      reports: getReports(),
       errors: getErrorsMap(),
       bankLocal: (typeof qdb?.getLocal==='function') ? qdb.getLocal() : []
     };
@@ -1199,15 +1247,12 @@ function renderAccount(){
   const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'nextmed-backup.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
   });
   document.getElementById('accClear')?.addEventListener('click', async ()=>{
-    const ok = await showConfirmModal({ title:'Cancella dati locali', message:'Questa azione rimuove impostazioni, report, errori e banca locale. Procedere?', okText:'Sì, cancella', cancelText:'Annulla' });
+    const ok = await showConfirmModal({ title:'Cancella dati cloud', message:'Questa azione rimuove impostazioni, report ed errori salvati nel cloud per il tuo account. Procedere?', okText:'Sì, cancella', cancelText:'Annulla' });
     if(!ok) return;
     try{
-      localStorage.removeItem('psprep_settings');
-      localStorage.removeItem('psprep_reports_v1');
-      localStorage.removeItem('psprep_errors_v1');
-      if(typeof qdb?.clearLocal==='function') qdb.clearLocal();
+      await CLOUD.clearAll();
     }finally{
-      loadSettingsUI(); renderAccount(); alert('Dati locali rimossi.');
+      loadSettingsUI(); renderAccount(); alert('Dati cloud azzerati.');
     }
   });
 
@@ -1228,7 +1273,7 @@ function renderAccount(){
 }
 
 function renderReport(){
-  const arr = JSON.parse(localStorage.getItem("psprep_reports_v1")||"[]");
+  const arr = getReports();
   const el = $("#reportArea");
   if(arr.length===0){ el.innerHTML = "<p>Ancora nessun dato…</p>"; return; }
 
@@ -1478,9 +1523,9 @@ const SIM_RULES_2025 = {
     // Netlify Identity
     if(window.netlifyIdentity){
       const id = window.netlifyIdentity;
-      id.on('init', user => { mapIdentityUserToProfile(user); });
-      id.on('login', user => { mapIdentityUserToProfile(user); closeLoginOverlay(); });
-      id.on('logout', () => { mapIdentityUserToProfile(null); });
+      id.on('init', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); });
+      id.on('login', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); closeLoginOverlay(); });
+      id.on('logout', async () => { mapIdentityUserToProfile(null); await CLOUD.load(); loadSettingsUI(); renderAccount(); });
       id.on('error', (e)=>{ console.warn('Identity error', e); });
       // Inizializza e verifica stato
       id.init();
