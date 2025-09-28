@@ -1128,76 +1128,51 @@ $("#startSim")?.addEventListener("click", async ()=>{
 /* [7] Settings & Report */
 function loadSettingsUI(){
   const s=getSettings();
-  $("#settDuration").classList.add("styled-select");
-  $("#settScoreRight").classList.add("styled-select");
-  $("#settScoreWrong").classList.add("styled-select");
   $("#settTheme").classList.add("styled-select");
-  $("#settSounds").classList.add("styled-select");
-  $("#settAutoAdvance").classList.add("styled-select");
-  $("#settWarnTimer").classList.add("styled-select");
-  
-  $("#settDuration").value=s.duration;
-  $("#settScoreRight").value=s.right;
-  $("#settScoreWrong").value=s.wrong;
   $("#settTheme").value = s.theme || 'auto';
-  $("#settSounds").value = (s.sounds===0||s.sounds==='0')? '0' : '1';
-  $("#settAutoAdvance").value = s.autoAdvance || 0;
-  $("#settWarnTimer").value = s.warnTimer || 5;
-  // profile fields
-  const prof = (s.profile||{});
-  $("#profileName").value = prof.name || '';
-  $("#profileSurname").value = prof.surname || '';
-  $("#profileEmail").value = prof.email || '';
-  $("#profileCloud").value = prof.cloud ? '1' : '0';
+  // Stato lingua: salvo in settings.profile.lang ('it' default)
+  const langBtn = document.getElementById('langToggle');
+  const lang = (s.profile && s.profile.lang) || 'it';
+  if(langBtn) langBtn.textContent = lang==='it' ? 'Lingua: Italiano' : 'Language: English';
 }
 
 $("#saveSettings")?.addEventListener("click", async ()=>{
+  const cur = getSettings();
   const s={
-    duration: parseInt($("#settDuration").value||"100",10),
-    right: parseFloat($("#settScoreRight").value||"1.5"),
-    wrong: parseFloat($("#settScoreWrong").value||"0.4"),
-    theme: $("#settTheme").value || 'auto',
-    sounds: parseInt($("#settSounds").value||'1',10),
-    autoAdvance: parseInt($("#settAutoAdvance").value||'0',10),
-    warnTimer: parseInt($("#settWarnTimer").value||'5',10)
+    ...cur,
+    theme: $("#settTheme").value || 'auto'
   };
   saveSettingsObj(s); alert("Impostazioni salvate");
 });
 
-// Export impostazioni
-$("#exportSettings")?.addEventListener('click', ()=>{
-  const s = getSettings(); const blob = new Blob([JSON.stringify(s, null, 2)], {type:'application/json'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'nextmed-settings.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+// Rimozione export/import/reset: non più presenti nell'UI
+
+// Toggle lingua (it/en)
+$("#langToggle")?.addEventListener('click', ()=>{
+  const s = getSettings(); s.profile = s.profile || {};
+  const cur = s.profile.lang || 'it';
+  s.profile.lang = (cur === 'it') ? 'en' : 'it';
+  saveSettingsObj(s);
+  loadSettingsUI();
 });
 
-// Import impostazioni
-$("#importSettings")?.addEventListener('click', ()=>$("#importSettingsFile").click());
-$("#importSettingsFile")?.addEventListener('change', async (ev)=>{
-  const f = ev.target.files && ev.target.files[0]; if(!f) return; const text = await f.text();
-  try{ const obj = JSON.parse(text); saveSettingsObj(obj); loadSettingsUI(); alert('Import impostazioni riuscito.'); }
-  catch(e){ alert('Errore import: '+e.message); }
-  finally{ ev.target.value = ''; }
+// Gestione account (apre modale Netlify Identity per profilo/password)
+$("#manageAccount")?.addEventListener('click', ()=>{
+  try{ window.netlifyIdentity?.open('user'); }catch(_){ window.netlifyIdentity?.open(); }
 });
 
-// Reset impostazioni (torna ai default)
-$("#resetSettings")?.addEventListener('click', async ()=>{
-  if(!confirm('Ripristinare le impostazioni predefinite?')) return;
-  // Solo reset delle impostazioni lasciando intatti report/errori
-  const current = { ...CLOUD.doc };
-  current.settings = {};
-  await CLOUD.save({ settings: {} });
-  loadSettingsUI(); alert('Impostazioni ripristinate.');
-});
-
-// Save profile
-$("#saveProfile")?.addEventListener('click', ()=>{
-  const s = getSettings();
-  s.profile = s.profile || {};
-  s.profile.name = $("#profileName").value || '';
-  s.profile.surname = $("#profileSurname").value || '';
-  s.profile.email = $("#profileEmail").value || '';
-  s.profile.cloud = $("#profileCloud").value==='1';
-  saveSettingsObj(s); alert('Profilo salvato localmente.');
+// Eliminazione account definitiva (conferma + cleanup dati)
+$("#deleteAccount")?.addEventListener('click', async ()=>{
+  const ok = await showConfirmModal({ title:'Elimina account', message:'Questa azione è irreversibile. Vuoi eliminare definitivamente il tuo account e tutti i dati associati?', okText:'Elimina', cancelText:'Annulla' });
+  if(!ok) return;
+  try{
+    // Netlify Identity non espone delete user dal client per sicurezza.
+    // Mostriamo istruzioni: l’utente può eseguire la cancellazione dalla modale Identity (tab User) o contattarci.
+    window.netlifyIdentity?.open('user');
+    alert('Per motivi di sicurezza, completa l’eliminazione account dalla finestra Account (Netlify Identity) o contattaci. Intanto azzero i tuoi dati applicativi.');
+  } finally {
+    await CLOUD.clearAll();
+  }
 });
 
 // Applica tema (chiamata anche dopo loadSettingsUI)

@@ -585,78 +585,30 @@
       <div id="reportArea" class="card glass"><p>Ancora nessun dato…</p></div>
     </section>
 
-    <!-- [5.9] Impostazioni -->
+    <!-- [5.9] Impostazioni (semplificate) -->
     <section id="settings" class="panel fade-in">
       <div class="section-header">
         <h1>Impostazioni</h1>
-        <p class="sub">Preferenze locali (salvate su questo dispositivo).</p>
+        <p class="sub">Tema, lingua e gestione account.</p>
       </div>
       <div class="card glass">
-        <h3>Simulazione</h3>
+        <h3>Aspetto e lingua</h3>
         <div class="filters">
-          <label>Durata (minuti)
-            <input id="settDuration" type="number" min="10" max="200" step="5" value="100">
-          </label>
-          <label>Punteggio corrette (+)
-            <input id="settScoreRight" type="number" step="0.1" value="1.5">
-          </label>
-          <label>Penalità errate (−)
-            <input id="settScoreWrong" type="number" step="0.1" value="0.4">
-          </label>
-        </div>
-          <div class="filters" style="margin-top:12px;">
-            <label>Tema
-              <select id="settTheme"><option value="auto">Automatico</option><option value="light">Chiaro</option><option value="dark">Scuro</option></select>
-            </label>
-            <label>Suoni
-              <select id="settSounds"><option value="1">Attivi</option><option value="0">Disattivati</option></select>
-            </label>
-            <label>Auto-advance dopo risposta (s)
-              <input id="settAutoAdvance" type="number" min="0" max="10" step="1" value="0">
-            </label>
-            <label>Avviso timer residuo (min)
-              <input id="settWarnTimer" type="number" min="0" max="30" step="1" value="5">
-            </label>
-          </div>
-          <div class="btnrow" style="margin-top:8px;display:flex;gap:10px;flex-wrap:wrap;">
-            <button id="saveSettings" class="btn primary" type="button">Salva impostazioni</button>
-            <button id="exportSettings" class="btn" type="button">Esporta impostazioni</button>
-            <input id="importSettingsFile" type="file" accept="application/json" style="display:none;">
-            <button id="importSettings" class="btn" type="button">Importa impostazioni</button>
-            <button id="resetSettings" class="btn" type="button" style="color:var(--err);border:1px solid var(--border);">Reset impostazioni</button>
-          </div>
-          <p class="small">Nella demo le quote per materia sono ridotte; l'ordine e il timer rispettano queste impostazioni.</p>
-      </div>
-      <div class="card glass">
-        <h3>Profilo</h3>
-        <div class="filters">
-          <label>Nome
-            <input id="profileName" type="text" placeholder="Es. Mario">
-          </label>
-          <label>Cognome
-            <input id="profileSurname" type="text" placeholder="Es. Rossi">
-          </label>
-          <label>Email
-            <input id="profileEmail" type="email" placeholder="esempio@mail.com">
-          </label>
-          <label>Salva su cloud (placeholder)
-            <select id="profileCloud"><option value="0">No</option><option value="1">Sì (richiede setup)</option></select>
+          <label>Tema
+            <select id="settTheme"><option value="auto">Automatico</option><option value="light">Chiaro</option><option value="dark">Scuro</option></select>
           </label>
         </div>
         <div class="btnrow">
-          <button id="saveProfile" class="btn primary">Salva profilo</button>
+          <button id="langToggle" class="btn" type="button">Lingua: Italiano</button>
         </div>
-        <p class="small">I dati del profilo sono salvati localmente. L'integrazione cloud sarà implementata in seguito.</p>
-        <div style="margin-top:10px;">
-          <p class="small">Accedi con Google per sincronizzare il profilo (richiede Client ID).</p>
-          <!-- Google Identity Services: il clientId va configurato nelle impostazioni server-side o come variabile d'ambiente -> TODO -->
-          <script src="https://accounts.google.com/gsi/client" async defer></script>
-          <div id="g_id_onload" data-client_id="" data-login_uri="" data-auto_prompt="false"></div>
-          <div id="googleSignBtn" style="margin-top:8px;"></div>
-          <div class="btnrow" style="margin-top:8px;">
-            <button id="googleDisconnect" class="btn" style="display:none;">Disconnetti Google</button>
-          </div>
+      </div>
+      <div class="card glass">
+        <h3>Account</h3>
+        <div class="btnrow">
+          <button id="manageAccount" class="btn primary" type="button">Gestisci account / Cambia password</button>
+          <button id="deleteAccount" class="btn danger" type="button">Elimina definitivamente l’account</button>
         </div>
+        <p class="small">L’eliminazione è irreversibile. Verranno rimossi account e dati associati.</p>
       </div>
     </section>
   </main>
