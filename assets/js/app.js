@@ -235,9 +235,15 @@ async function handleHash(){
   if(parts[0]==="lezioni" && parts[1]==="materia" && parts[2]){ showMateria(decodeURIComponent(parts[2])); }
   else if(parts[0]==="lezioni" && parts[1]==="argomento" && parts[2] && parts[3]){ showArgomento(decodeURIComponent(parts[2]), decodeURIComponent(parts[3])); }
   else if(parts[0]==="lezione" && parts[1] && parts[2] && parts[3]){ showLezione(decodeURIComponent(parts[1]), decodeURIComponent(parts[2]), decodeURIComponent(parts[3])); }
-  else if(parts[0]==="report" && parts[1]==="simulazioni") { setActive('report'); renderReportList('Simulazione'); }
-  else if(parts[0]==="report" && parts[1]==="esercitazioni") { setActive('report'); renderReportList('Esercitazione'); }
-  else { setActive(parts[0]||"home"); if(parts[0]==="report") renderReport(); if(parts[0]==="settings") loadSettingsUI(); if(parts[0]==="account") renderAccount(); }
+  else if(parts[0]==="report" && parts[1]==="simulazioni") { await CLOUD.load(); setActive('report'); renderReportList('Simulazione'); }
+  else if(parts[0]==="report" && parts[1]==="esercitazioni") { await CLOUD.load(); setActive('report'); renderReportList('Esercitazione'); }
+  else {
+    const tab = parts[0]||"home";
+    setActive(tab);
+    if(tab==="report"){ await CLOUD.load(); renderReport(); }
+    if(tab==="settings"){ loadSettingsUI(); }
+    if(tab==="account"){ await CLOUD.load(); renderAccount(); }
+  }
 
   // Mostra la lista completa dei report con filtri
   function renderReportList(tipo){
@@ -344,6 +350,10 @@ function hasValidSession(){
 window.addEventListener('visibilitychange', ()=>{
   if(document.visibilityState === 'hidden'){
     CLOUD.flush();
+  }
+  if(document.visibilityState === 'visible'){
+    // iOS può sospendere fetch: ricarica i dati quando torni in foreground
+    (async()=>{ try{ await CLOUD.load(); if((location.hash||'#').startsWith('#report')) renderReport(); if((location.hash||'#')==="#account") renderAccount(); }catch(_){/* no-op */} })();
   }
 });
 window.addEventListener('pagehide', ()=>{ CLOUD.flush(); });
@@ -1351,7 +1361,12 @@ function renderAccount(){
 function renderReport(){
   const arr = getReports();
   const el = $("#reportArea");
-  if(arr.length===0){ el.innerHTML = "<p>Ancora nessun dato…</p>"; return; }
+  if(arr.length===0){
+    el.innerHTML = `<div class="small muted">Ancora nessun dato…</div>
+      <div style="margin-top:8px"><button id="refreshReports" class="btn small">Aggiorna</button></div>`;
+    document.getElementById('refreshReports')?.addEventListener('click', async ()=>{ await CLOUD.load(); renderReport(); });
+    return;
+  }
 
   // Aggrega per materia quando disponibile (perSubject) oppure per materia dei report
   const agg = {};
