@@ -38,11 +38,9 @@
         <li>Simula i test ufficiali per migliorare le tue performance.</li>
         <li>Monitora i tuoi progressi con report dettagliati.</li>
       </ul>
-      <p>Accedi ora con il tuo account Google per iniziare!</p>
-      <p>Per continuare è necessario accedere con email/password oppure con Google.</p>
-      <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
-        <button class="btn" id="btnEmailLogin">Accedi / Registrati con Email</button>
-        <div id="googleSignBtn"></div>
+      <p>Per continuare è necessario accedere. Premi il pulsante qui sotto per accedere o registrarti.</p>
+      <div style="display:flex; flex-direction:column; gap:10px; align-items:center; width:100%; max-width:320px; margin:0 auto;">
+        <button class="btn primary" id="btnEmailLogin">Accedi o Registrati</button>
       </div>
     </div>
   </div>
@@ -135,6 +133,12 @@
     .login-logo {
       width: 100px;
       margin-bottom: 15px;
+    }
+
+    /* Evidenzia il pulsante principale di accesso nella modale */
+    .login-modal .btn.primary{
+      width: 100%;
+      font-size: 18px;
     }
 
     .login-modal h2 {
@@ -388,7 +392,7 @@
           <button id="accEditProfile" class="btn">Modifica profilo</button>
           <button id="accGoToReports" class="btn">Vai ai report</button>
           <button id="accExport" class="btn">Esporta dati</button>
-          <button id="accLogin" class="btn" type="button" onclick="window.app?.openLoginOverlay?.()">Accedi / Registrati</button>
+          <button id="accLogin" class="btn" type="button" onclick="window.app?.openLoginOverlay?.()">Accedi o Registrati</button>
           <button id="accLogout" class="btn" type="button">Logout</button>
           <button id="accClear" class="btn" style="color:var(--err); border:1px solid var(--border);">Cancella dati locali</button>
         </div>
