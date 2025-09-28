@@ -51,6 +51,7 @@ function showConfirmModal(opts){
 const CLOUD = {
   doc: { settings:{}, reports:[], errors:{} },
   loaded: false,
+  _queue: Promise.resolve(),
   async token(){
     try{ const u = window.netlifyIdentity && window.netlifyIdentity.currentUser(); return u ? await u.jwt() : null; }catch(_){ return null; }
   },
@@ -66,27 +67,52 @@ const CLOUD = {
     this.loaded = true; return this.doc;
   },
   async save(partial){
-    // Merge in memoria
+    // Merge in memoria subito per coerenza UI ottimistica
     if(partial && typeof partial === 'object'){
       if('settings' in partial) this.doc.settings = partial.settings || {};
       if('reports' in partial) this.doc.reports = Array.isArray(partial.reports) ? partial.reports : [];
       if('errors' in partial) this.doc.errors = partial.errors || {};
     }
     if(!this.isLoggedIn()) return { ok:true, offline:true };
-    const t = await this.token();
-    const r = await fetch('/.netlify/functions/user-data', {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
-      body: JSON.stringify(partial||{})
-    });
-    return { ok: r.ok };
+
+    const run = async()=>{
+      const t = await this.token();
+      const doReq = async ()=>{
+        const r = await fetch('/.netlify/functions/user-data', {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+          body: JSON.stringify(partial||{})
+        });
+        if(!r.ok) throw new Error('Save failed: '+r.status);
+        return true;
+      };
+      // retry semplice con backoff
+      let attempts=0; let delay=300;
+      while(true){
+        try{ await doReq(); return { ok:true }; }
+        catch(e){
+          attempts++;
+          if(attempts>=3) { console.warn('CLOUD.save fallito', e); return { ok:false, error:String(e) }; }
+          await new Promise(res=>setTimeout(res, delay));
+          delay *= 2;
+        }
+      }
+    };
+
+    // serializza le scritture
+    this._queue = this._queue.then(run, run);
+    return this._queue;
   },
   async clearAll(){
     this.doc = { settings:{}, reports:[], errors:{} };
     if(!this.isLoggedIn()) return { ok:true, offline:true };
-    const t = await this.token();
-    const r = await fetch('/.netlify/functions/user-data', { method: 'DELETE', headers: t? { Authorization: 'Bearer '+t } : {} });
-    return { ok: r.ok };
+    const run = async()=>{
+      const t = await this.token();
+      const r = await fetch('/.netlify/functions/user-data', { method: 'DELETE', headers: t? { Authorization: 'Bearer '+t } : {} });
+      return { ok: r.ok };
+    };
+    this._queue = this._queue.then(run, run);
+    return this._queue;
   }
 };
 
@@ -1540,17 +1566,31 @@ const SIM_RULES_2025 = {
     } else {
       delete s.profile.name; delete s.profile.email; delete s.profile.google_sub;
     }
-    saveSettingsObj(s);
     try{ loadSettingsUI(); renderAccount(); }catch(_){ /* no-op */ }
+    return s;
   }
 
   function bootstrapIdentity(){
     // Netlify Identity
     if(window.netlifyIdentity){
       const id = window.netlifyIdentity;
-  id.on('init', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); requireAuth(); });
-  id.on('login', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); closeLoginOverlay(); requireAuth(); });
-  id.on('logout', async () => { mapIdentityUserToProfile(null); await CLOUD.load(); loadSettingsUI(); renderAccount(); requireAuth(); });
+      id.on('init', async user => {
+        await CLOUD.load();
+        const s = mapIdentityUserToProfile(user);
+        if(user) saveSettingsObj(s); // persisti i metadati senza perdere avatar pre-esistente
+        loadSettingsUI(); renderAccount(); requireAuth();
+      });
+      id.on('login', async user => {
+        await CLOUD.load();
+        const s = mapIdentityUserToProfile(user);
+        await CLOUD.save({ settings: s });
+        loadSettingsUI(); renderAccount(); closeLoginOverlay(); requireAuth();
+      });
+      id.on('logout', async () => {
+        mapIdentityUserToProfile(null);
+        await CLOUD.load();
+        loadSettingsUI(); renderAccount(); requireAuth();
+      });
       id.on('error', (e)=>{ console.warn('Identity error', e); });
       // Inizializza e verifica stato
       // Se eseguito in locale, suggerisci al widget l'URL del sito Netlify per evitare il prompt "Development Settings"
