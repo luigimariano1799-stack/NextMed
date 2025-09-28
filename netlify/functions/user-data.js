@@ -63,6 +63,36 @@ exports.handler = async function(event, context){
     const k = keyToWrite || emailKey || subKey || 'unknown.json';
     await store.set(k, JSON.stringify(doc), { contentType: 'application/json' });
   }
+  function asArray(a){ return Array.isArray(a) ? a : []; }
+  function repKey(r){
+    if(!r || typeof r !== 'object') return '';
+    if(r.id) return String(r.id);
+    const m = r.mode||'';
+    const mat = r.materia||'';
+    const arg = r.argomento||'';
+    const tot = r.overall && r.overall.total || 0;
+    const cor = r.overall && r.overall.correct || 0;
+    const ts = r.ts || 0;
+    return `${m}|${mat}|${arg}|${cor}/${tot}|${ts}`;
+  }
+  function mergeReports(currentArr, incomingArr){
+    const cur = asArray(currentArr);
+    const inc = asArray(incomingArr);
+    const map = new Map();
+    for(const r of cur){ const k = repKey(r); if(!k) continue; map.set(k, r); }
+    for(const r of inc){
+      const k = repKey(r); if(!k) continue;
+      const prev = map.get(k);
+      if(!prev) map.set(k, r);
+      else {
+        // se esistono entrambi, tieni quello con ts maggiore (più recente)
+        map.set(k, (r.ts||0) >= (prev.ts||0) ? r : prev);
+      }
+    }
+    const merged = Array.from(map.values());
+    merged.sort((a,b)=> (b.ts||0) - (a.ts||0));
+    return merged.slice(0,250);
+  }
 
   const method = (event.httpMethod || '').toUpperCase();
   try{
@@ -76,9 +106,13 @@ exports.handler = async function(event, context){
       // se parziale, merge superficiale per compat; leggi prima da emailKey poi da subKey
       const existing = await getFirstExisting([emailKey, subKey]);
       let current = existing.doc || { settings:{}, reports:[], errors:{} };
+      // Merge report con union per evitare duplicati e non perdere elementi cross-device
+      const reports = (body.reports !== undefined)
+        ? mergeReports(current.reports, body.reports)
+        : asArray(current.reports);
       const next = {
         settings: body.settings !== undefined ? body.settings : (current.settings||{}),
-        reports: body.reports !== undefined ? body.reports : (current.reports||[]),
+        reports,
         errors: body.errors !== undefined ? body.errors : (current.errors||{})
       };
       // Scrivi preferendo emailKey per unificazione cross-device

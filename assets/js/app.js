@@ -791,6 +791,8 @@ function nextPractice(){
 async function finishPractice(timeup){
   if(P_TIMER) clearInterval(P_TIMER); P_TIMER=null;
   const st=PRACTICE, el=getPracticeArea(); if(!st) return;
+  if(st._closed_final) return; // evita doppio salvataggio
+  st._closed_final = true;
   const total=st.items.length;
   el.innerHTML = `<h2>Fine esercitazione</h2>
     <div class="kpis">
@@ -1010,6 +1012,8 @@ function scoreSim(){
 
 /* fine simulazione */
 async function finishSim(){
+  if(SIM && SIM._closed_final) return; // evita doppio salvataggio
+  if(SIM) SIM._closed_final = true;
   const el=$("#simArea");
   const res=scoreSim();
   const per = res.perSubject.map(s=>`<div class="kpi">${s.label}: C ${s.correct} • E ${s.wrong} • B ${s.blank} / ${s.total}</div>`).join("");
@@ -1029,7 +1033,7 @@ async function finishSim(){
   TIMER = null;
   // nascondi il bottone flottante
   // floating end button removed — inline .endSimBtn handles termination
-  await saveReport({mode:"Simulazione", overall:res.overall});
+  await saveReport({mode:"Simulazione", overall:res.overall, ts: Date.now()});
 }
 
 // Termina simulazione prematuramente (bottone UI)
