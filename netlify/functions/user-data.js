@@ -59,6 +59,36 @@ exports.handler = async function(event, context){
     }
     return { key: (emailKey || subKey), doc: { settings:{}, reports:[], errors:{} } };
   }
+  async function readDocForKey(k){
+    if(!k) return null;
+    try{ const res = await store.get(k, { type: 'json' }); return res || null; }catch(_){ return null; }
+  }
+  function mergeErrors(a, b){
+    const A = a && typeof a === 'object' ? a : {};
+    const B = b && typeof b === 'object' ? b : {};
+    const out = { ...A };
+    for(const k of Object.keys(B)){
+      const arr = new Set([...(A[k]||[]), ...(B[k]||[])]);
+      out[k] = Array.from(arr).slice(0,1000);
+    }
+    return out;
+  }
+  async function readMergedDocs(){
+    const [docEmail, docSub] = await Promise.all([
+      readDocForKey(emailKey),
+      readDocForKey(subKey)
+    ]);
+    if(docEmail && !docSub) return { key: emailKey, doc: docEmail };
+    if(!docEmail && docSub) return { key: subKey, doc: docSub };
+    if(!docEmail && !docSub) return { key: (emailKey || subKey), doc: { settings:{}, reports:[], errors:{} } };
+    // Merge: prefer settings da email, reports unione, errors merge per materia
+    const merged = {
+      settings: docEmail.settings || {},
+      reports: mergeReports(docSub.reports, docEmail.reports), // unisco entrambe le direzioni
+      errors: mergeErrors(docEmail.errors, docSub.errors)
+    };
+    return { key: emailKey, doc: merged };
+  }
   async function writeDocFor(keyToWrite, doc){
     const k = keyToWrite || emailKey || subKey || 'unknown.json';
     await store.set(k, JSON.stringify(doc), { contentType: 'application/json' });
@@ -97,22 +127,17 @@ exports.handler = async function(event, context){
   const method = (event.httpMethod || '').toUpperCase();
   try{
     if(method === 'GET'){
-      // Prefer emailKey; se assente cerca subKey (migrazione trasparente)
-      const found = await getFirstExisting([emailKey, subKey]);
+      // Leggi entrambi i documenti e uniscili (migrazione trasparente)
+      const found = await readMergedDocs();
       const doc = found.doc || { settings:{}, reports:[], errors:{} };
-      // Se troviamo duplicati storici, ripuliamo e persistiamo
-      const cleanedReports = mergeReports(doc.reports, []);
-      if(cleanedReports.length !== asArray(doc.reports).length){
-        const next = { ...doc, reports: cleanedReports };
-        await writeDocFor(emailKey || found.key, next);
-        return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify(next) };
-      }
+      // Persisti lo stato unificato sulla chiave email (se disponibile)
+      await writeDocFor(emailKey || found.key, doc);
       return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify(doc) };
     }
     if(method === 'PUT' || method === 'POST'){
       const body = event.body ? JSON.parse(event.body) : {};
-      // se parziale, merge superficiale per compat; leggi prima da emailKey poi da subKey
-      const existing = await getFirstExisting([emailKey, subKey]);
+      // Base corrente: unione di emailKey e subKey
+      const existing = await readMergedDocs();
       let current = existing.doc || { settings:{}, reports:[], errors:{} };
       // Merge report con union per evitare duplicati e non perdere elementi cross-device
       const reports = (body.reports !== undefined)
@@ -121,7 +146,7 @@ exports.handler = async function(event, context){
       const next = {
         settings: body.settings !== undefined ? body.settings : (current.settings||{}),
         reports,
-        errors: body.errors !== undefined ? body.errors : (current.errors||{})
+        errors: body.errors !== undefined ? mergeErrors(current.errors, body.errors) : (current.errors||{})
       };
       // Scrivi preferendo emailKey per unificazione cross-device
       await writeDocFor(emailKey || existing.key, next);
