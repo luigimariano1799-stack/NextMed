@@ -127,24 +127,30 @@ const CLOUD = {
     }
 
     const run = async()=>{
-      const t = await this.token();
-      const doReq = async ()=>{
-        const r = await fetch('/.netlify/functions/user-data', {
-          method: 'PUT',
-          headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
-          keepalive: true,
-          body: JSON.stringify(partial||{})
-        });
-        if(!r.ok) throw new Error('Save failed: '+r.status);
-        return true;
-      };
-      // retry semplice con backoff
+      // retry con refresh token + fallback a outbox
       let attempts=0; let delay=300;
       while(true){
-        try{ await doReq(); return { ok:true }; }
-        catch(e){
+        try{
+          const t = await this.token();
+          const r = await fetch('/.netlify/functions/user-data', {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+            keepalive: true,
+            body: JSON.stringify(partial||{})
+          });
+          if(r.ok) return { ok:true };
+          // Se 401/403 prova a rinnovare jwt e ritenta
+          if(r.status===401 || r.status===403){
+            try{ this._lastToken = null; await this.token(); }catch(_){ }
+          }
+          throw new Error('Save failed: '+r.status);
+        }catch(e){
           attempts++;
-          if(attempts>=3) { console.warn('CLOUD.save fallito', e); return { ok:false, error:String(e) }; }
+          if(attempts>=3){
+            console.warn('CLOUD.save fallito, metto in outbox', e);
+            try{ this._stashOffline(partial||{}); }catch(_){ }
+            return { ok:false, error:String(e) };
+          }
           await new Promise(res=>setTimeout(res, delay));
           delay *= 2;
         }
@@ -178,8 +184,15 @@ const CLOUD = {
         headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
         body: JSON.stringify({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors })
       });
+      if(!r.ok){
+        // stash se fallisce (es. token scaduto al close)
+        try{ this._stashOffline({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors }); }catch(_){ }
+      }
       return { ok: r.ok };
-    }catch(e){ return { ok:false, error:String(e) }; }
+    }catch(e){
+      try{ this._stashOffline({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors }); }catch(_){ }
+      return { ok:false, error:String(e) };
+    }
   }
 };
 
