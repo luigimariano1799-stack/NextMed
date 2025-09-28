@@ -147,8 +147,13 @@ function saveSettingsObj(o){ CLOUD.save({ settings: o }); }
 function getReports(){ return Array.isArray(CLOUD.doc.reports) ? CLOUD.doc.reports : []; }
 function saveReport(entry){
   const arr = getReports().slice();
-  arr.unshift({ ...entry, ts: Date.now() });
-  return CLOUD.save({ reports: arr.slice(0,250) });
+  const withTs = { ...entry, ts: entry && entry.ts ? entry.ts : Date.now() };
+  arr.unshift(withTs);
+  // Enqueue salvataggio e forza un flush immediato in background
+  return CLOUD.save({ reports: arr.slice(0,250) }).then(()=>{
+    // Best-effort flush (non blocca la UI)
+    try{ setTimeout(()=>{ CLOUD.flush(); }, 0); }catch(_){/* ignore */}
+  });
 }
 
 /* Archivio errori (per materia) */
@@ -220,7 +225,11 @@ const MINISTERIAL_ORDER = [
 
 
 /* [3] Router e navigazione */
-function handleHash(){
+async function handleHash(){
+  // Assicura che i dati cloud siano disponibili prima del render
+  try{
+    if(!CLOUD.loaded){ await CLOUD.load(); }
+  }catch(_){ /* ignore: UI renderà comunque fallback */ }
   const h=(location.hash||"#home").slice(1);
   const parts=h.split("/");
   if(parts[0]==="lezioni" && parts[1]==="materia" && parts[2]){ showMateria(decodeURIComponent(parts[2])); }
@@ -277,10 +286,10 @@ function handleHash(){
     }
   }
 }
-window.addEventListener("hashchange", handleHash);
-window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); /* settings/UI aggiornati dopo CLOUD.load() */ handleHash(); });
+window.addEventListener("hashchange", ()=>{ (async()=>{ try{ await handleHash(); }catch(_){/* no-op */} })(); });
+window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); /* settings/UI aggiornati dopo CLOUD.load() */ (async()=>{ try{ await handleHash(); }catch(_){/* no-op */} })(); });
 // Ensure lessons and cloud are loaded before initial render
-window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); handleHash(); });
+window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); try{ await handleHash(); }catch(_){/* no-op */} });
 
 // Auth guard: blocca l'uso del sito finché non si è autenticati
 function requireAuth(){
@@ -1597,6 +1606,8 @@ const SIM_RULES_2025 = {
         if(user){ setSessionCookie(); saveSettingsObj(s); }
         else { clearSessionCookie(); }
         loadSettingsUI(); renderAccount(); requireAuth();
+        // Rirender delle viste dipendenti dai dati cloud
+        try{ await handleHash(); }catch(_){}
       });
       id.on('login', async user => {
         await CLOUD.load();
@@ -1604,12 +1615,14 @@ const SIM_RULES_2025 = {
         await CLOUD.save({ settings: s });
         setSessionCookie();
         loadSettingsUI(); renderAccount(); closeLoginOverlay(); requireAuth();
+        try{ await handleHash(); }catch(_){}
       });
       id.on('logout', async () => {
         clearSessionCookie();
         mapIdentityUserToProfile(null);
         await CLOUD.load();
         loadSettingsUI(); renderAccount(); requireAuth();
+        try{ await handleHash(); }catch(_){}
       });
       id.on('error', (e)=>{ console.warn('Identity error', e); });
       // Inizializza e verifica stato
