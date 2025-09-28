@@ -23,10 +23,11 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <link rel="icon" href="NextMed_Logo.png" />
   <link rel="apple-touch-icon" href="NextMed_Logo.png" />
+  <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <!-- Pagina di ingresso -->
-  <div id="login-overlay" class="overlay" style="display: flex;">
+  <div id="login-overlay" class="overlay" style="display: none;">
     <div class="login-modal">
   <img src="NextMed_Logo.png" alt="Logo NextMed" class="login-logo">
   <h2>Benvenuto su NextMed!</h2>
@@ -38,8 +39,12 @@
         <li>Monitora i tuoi progressi con report dettagliati.</li>
       </ul>
       <p>Accedi ora con il tuo account Google per iniziare!</p>
-      <button class="btn google-login" onclick="loginWithGoogle()">Accedi con Google</button>
-      <button class="btn close-login" onclick="closeLoginOverlay()">✕</button>
+      <p>Accedi con email/password oppure con Google.</p>
+      <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
+        <button class="btn" id="btnEmailLogin">Accedi / Registrati con Email</button>
+        <div id="googleSignBtn"></div>
+        <button class="btn close-login" onclick="window.app?.closeLoginOverlay?.()">✕</button>
+      </div>
     </div>
   </div>
 
@@ -376,6 +381,8 @@
           <button id="accEditProfile" class="btn">Modifica profilo</button>
           <button id="accGoToReports" class="btn">Vai ai report</button>
           <button id="accExport" class="btn">Esporta dati</button>
+          <button id="accLogin" class="btn" type="button" onclick="window.app?.openLoginOverlay?.()">Accedi / Registrati</button>
+          <button id="accLogout" class="btn" type="button">Logout</button>
           <button id="accClear" class="btn" style="color:var(--err); border:1px solid var(--border);">Cancella dati locali</button>
         </div>
       </div>
@@ -717,6 +724,13 @@
       ]
     };
   </script>
+  <script>
+    window.addEventListener('load', function(){
+      if(window.app && typeof window.app.bootstrapIdentity === 'function'){
+        window.app.bootstrapIdentity();
+      }
+    });
+  </script>
   <script src="assets/js/qdb.js"></script>
   <script src="assets/js/app.js"></script>
   <!-- floating end simulation button (bottom-right) removed; inline end button remains in the question UI -->
@@ -729,5 +743,17 @@
       document.getElementById('login-overlay').style.display = 'none';
     }
   </script>
+
+  <script>
+  document.addEventListener('click', function(e){
+    const t = e.target;
+    if(!t) return;
+    if(t.id === 'accLogout'){
+      if(window.netlifyIdentity){ window.netlifyIdentity.logout(); }
+      // Anche logout Google client-side se presente
+      try{ if(window.google && window.google.accounts && window.google.accounts.id){ window.google.accounts.id.disableAutoSelect(); } }catch(_){ }
+    }
+  });
+</script>
 </body>
 </html>

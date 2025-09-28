@@ -1442,3 +1442,60 @@ const SIM_RULES_2025 = {
     "Fisica e Matematica": 13
   }
 };
+
+// [Identity] Integrazione Netlify Identity + Google
+(function(){
+  const appNS = (window.app = window.app || {});
+
+  function openLoginOverlay(){
+    const ov = document.getElementById('login-overlay');
+    if(ov){ ov.style.display = 'flex'; }
+  }
+  function closeLoginOverlay(){
+    const ov = document.getElementById('login-overlay');
+    if(ov){ ov.style.display = 'none'; }
+  }
+  appNS.openLoginOverlay = openLoginOverlay;
+  appNS.closeLoginOverlay = closeLoginOverlay;
+
+  function mapIdentityUserToProfile(user){
+    const s = getSettings(); s.profile = s.profile || {};
+    if(user){
+      const data = user.user_metadata || {};
+      s.profile.name = data.full_name || data.name || s.profile.name || 'Utente';
+      s.profile.email = user.email || s.profile.email || '';
+      // provider Google
+      const prov = Array.isArray(user.providers) ? user.providers.find(p=>p.provider==='google') : null;
+      if(prov){ s.profile.google_sub = prov.sub || s.profile.google_sub; }
+    } else {
+      delete s.profile.name; delete s.profile.email; delete s.profile.google_sub;
+    }
+    saveSettingsObj(s);
+    try{ loadSettingsUI(); renderAccount(); }catch(_){ /* no-op */ }
+  }
+
+  function bootstrapIdentity(){
+    // Netlify Identity
+    if(window.netlifyIdentity){
+      const id = window.netlifyIdentity;
+      id.on('init', user => { mapIdentityUserToProfile(user); });
+      id.on('login', user => { mapIdentityUserToProfile(user); closeLoginOverlay(); });
+      id.on('logout', () => { mapIdentityUserToProfile(null); });
+      id.on('error', (e)=>{ console.warn('Identity error', e); });
+      // Inizializza e verifica stato
+      id.init();
+
+      // Bottone email login
+      const emailBtn = document.getElementById('btnEmailLogin');
+      if(emailBtn){ emailBtn.addEventListener('click', ()=> id.open()); }
+    } else {
+      console.warn('Netlify Identity widget non presente');
+    }
+
+    // Google Sign-In: se già integrato altrove, possiamo inizializzarlo qui se serve clientId
+    // Se hai già impostato il clientId via markup #g_id_onload o vuoi usare initGoogleSignIn(clientId)
+    // lascia questo stub come hook di avvio.
+  }
+
+  appNS.bootstrapIdentity = bootstrapIdentity;
+})();
