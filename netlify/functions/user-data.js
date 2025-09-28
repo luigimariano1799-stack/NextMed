@@ -98,7 +98,15 @@ exports.handler = async function(event, context){
   try{
     if(method === 'GET'){
       // Prefer emailKey; se assente cerca subKey (migrazione trasparente)
-      const { doc } = await getFirstExisting([emailKey, subKey]);
+      const found = await getFirstExisting([emailKey, subKey]);
+      const doc = found.doc || { settings:{}, reports:[], errors:{} };
+      // Se troviamo duplicati storici, ripuliamo e persistiamo
+      const cleanedReports = mergeReports(doc.reports, []);
+      if(cleanedReports.length !== asArray(doc.reports).length){
+        const next = { ...doc, reports: cleanedReports };
+        await writeDocFor(emailKey || found.key, next);
+        return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify(next) };
+      }
       return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify(doc) };
     }
     if(method === 'PUT' || method === 'POST'){
