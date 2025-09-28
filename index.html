@@ -27,7 +27,7 @@
 </head>
 <body>
   <!-- Pagina di ingresso -->
-  <div id="login-overlay" class="overlay" style="display: none;">
+  <div id="login-overlay" class="overlay" style="display: flex;">
     <div class="login-modal">
   <img src="NextMed_Logo.png" alt="Logo NextMed" class="login-logo">
   <h2>Benvenuto su NextMed!</h2>
@@ -39,11 +39,10 @@
         <li>Monitora i tuoi progressi con report dettagliati.</li>
       </ul>
       <p>Accedi ora con il tuo account Google per iniziare!</p>
-      <p>Accedi con email/password oppure con Google.</p>
+      <p>Per continuare è necessario accedere con email/password oppure con Google.</p>
       <div style="display:flex; flex-direction:column; gap:10px; align-items:center;">
         <button class="btn" id="btnEmailLogin">Accedi / Registrati con Email</button>
         <div id="googleSignBtn"></div>
-        <button class="btn close-login" onclick="window.app?.closeLoginOverlay?.()">✕</button>
       </div>
     </div>
   </div>

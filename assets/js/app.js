@@ -234,6 +234,31 @@ window.addEventListener("load", ()=>{ initFilters(); renderMaterie(); /* setting
 // Ensure lessons and cloud are loaded before initial render
 window.addEventListener("load", async ()=>{ await loadLessons(); await CLOUD.load(); renderMaterie(); initFilters(); loadSettingsUI(); applyTheme(); handleHash(); });
 
+// Auth guard: blocca l'uso del sito finché non si è autenticati
+function requireAuth(){
+  const logged = !!(window.netlifyIdentity && window.netlifyIdentity.currentUser());
+  const ov = document.getElementById('login-overlay');
+  if(!logged){ if(ov) ov.style.display = 'flex'; return false; }
+  if(ov) ov.style.display = 'none';
+  return true;
+}
+
+// Forza il login all'avvio e ad ogni cambio hash
+window.addEventListener('load', ()=>{ requireAuth(); });
+window.addEventListener('hashchange', (e)=>{ if(!requireAuth()){ e.preventDefault(); location.hash = '#home'; } });
+
+// Intercetta click su link/bottoni principali e blocca se non loggato
+document.addEventListener('click', (e)=>{
+  const el = e.target.closest && e.target.closest('a, button');
+  if(!el) return;
+  // escludi pulsanti di login/modal
+  if(el.id==='btnEmailLogin' || el.id==='googleSignBtn' || el.closest('#login-overlay')) return;
+  if(!requireAuth()){
+    e.preventDefault(); e.stopPropagation();
+    return false;
+  }
+});
+
 // --- Home page render ---
 function renderHome(){
   const el = document.getElementById('home'); if(!el) return;
@@ -1523,9 +1548,9 @@ const SIM_RULES_2025 = {
     // Netlify Identity
     if(window.netlifyIdentity){
       const id = window.netlifyIdentity;
-      id.on('init', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); });
-      id.on('login', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); closeLoginOverlay(); });
-      id.on('logout', async () => { mapIdentityUserToProfile(null); await CLOUD.load(); loadSettingsUI(); renderAccount(); });
+  id.on('init', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); requireAuth(); });
+  id.on('login', async user => { mapIdentityUserToProfile(user); await CLOUD.load(); loadSettingsUI(); renderAccount(); closeLoginOverlay(); requireAuth(); });
+  id.on('logout', async () => { mapIdentityUserToProfile(null); await CLOUD.load(); loadSettingsUI(); renderAccount(); requireAuth(); });
       id.on('error', (e)=>{ console.warn('Identity error', e); });
       // Inizializza e verifica stato
       id.init();
