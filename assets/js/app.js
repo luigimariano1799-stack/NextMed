@@ -1341,16 +1341,7 @@ function renderAccount(){
   // Azioni
   document.getElementById('accGoToReports')?.addEventListener('click', ()=>{ location.hash='report'; setActive('report'); renderReport(); });
   document.getElementById('accEditProfile')?.addEventListener('click', ()=>{ location.hash='settings'; setActive('settings'); loadSettingsUI(); });
-  document.getElementById('accExport')?.addEventListener('click', ()=>{
-    const data = {
-      settings: getSettings(),
-      reports: getReports(),
-      errors: getErrorsMap(),
-      bankLocal: (typeof qdb?.getLocal==='function') ? qdb.getLocal() : []
-    };
-    const blob = new Blob([JSON.stringify(data, null, 2)], {type:'application/json'});
-  const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'nextmed-backup.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href),1000);
-  });
+  // Pulsante export rimosso dall'UI
   // Pulsante clear rimosso dall'UI
 
   // Cambia immagine profilo: click sull'avatar apre file picker
