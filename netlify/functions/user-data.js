@@ -20,9 +20,12 @@ exports.handler = async function(event, context){
   if(!user){
     return { statusCode: 401, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Unauthorized: login richiesto.' }) };
   }
-  const userId = user.sub || user.email || 'unknown';
   const bucketName = 'nextmed-users';
-  const key = `${userId}.json`;
+  // Normalizza chiave: preferisci email (minuscola) per stabilità cross-device/provider, fallback a sub
+  const email = (user.email || '').trim().toLowerCase();
+  const sub = user.sub || '';
+  const emailKey = email ? `${email}.json` : null;
+  const subKey = sub ? `${sub}.json` : null;
 
   if(!blobsLib){
     return {
@@ -46,40 +49,45 @@ exports.handler = async function(event, context){
   const store = client.blobStore(bucketName);
 
   // Helpers
-  async function readDoc(){
-    try {
-      const res = await store.get(key, { type: 'json' });
-      if(res == null) return { settings:{}, reports:[], errors:{} };
-      return res;
-    } catch(e){
-      // se il blob non esiste o altro errore: inizializza doc vuoto
-      return { settings:{}, reports:[], errors:{} };
+  async function getFirstExisting(keys){
+    for(const k of keys){
+      if(!k) continue;
+      try{
+        const res = await store.get(k, { type: 'json' });
+        if(res != null) return { key: k, doc: res };
+      }catch(_){ /* ignore and try next */ }
     }
+    return { key: (emailKey || subKey), doc: { settings:{}, reports:[], errors:{} } };
   }
-  async function writeDoc(doc){
-    await store.set(key, JSON.stringify(doc), { contentType: 'application/json' });
+  async function writeDocFor(keyToWrite, doc){
+    const k = keyToWrite || emailKey || subKey || 'unknown.json';
+    await store.set(k, JSON.stringify(doc), { contentType: 'application/json' });
   }
 
   const method = (event.httpMethod || '').toUpperCase();
   try{
     if(method === 'GET'){
-      const doc = await readDoc();
+      // Prefer emailKey; se assente cerca subKey (migrazione trasparente)
+      const { doc } = await getFirstExisting([emailKey, subKey]);
       return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify(doc) };
     }
     if(method === 'PUT' || method === 'POST'){
       const body = event.body ? JSON.parse(event.body) : {};
-      // se parziale, merge superficiale per compat
-      let current = await readDoc();
+      // se parziale, merge superficiale per compat; leggi prima da emailKey poi da subKey
+      const existing = await getFirstExisting([emailKey, subKey]);
+      let current = existing.doc || { settings:{}, reports:[], errors:{} };
       const next = {
         settings: body.settings !== undefined ? body.settings : (current.settings||{}),
         reports: body.reports !== undefined ? body.reports : (current.reports||[]),
         errors: body.errors !== undefined ? body.errors : (current.errors||{})
       };
-      await writeDoc(next);
+      // Scrivi preferendo emailKey per unificazione cross-device
+      await writeDocFor(emailKey || existing.key, next);
       return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify({ ok: true }) };
     }
     if(method === 'DELETE'){
-      await writeDoc({ settings:{}, reports:[], errors:{} });
+      // Cancella/azzera il doc nella chiave principale (email se disponibile)
+      await writeDocFor(emailKey || subKey, { settings:{}, reports:[], errors:{} });
       return { statusCode: 200, headers: JSON_HEADERS, body: JSON.stringify({ ok: true }) };
     }
     return { statusCode: 405, headers: JSON_HEADERS, body: JSON.stringify({ error: 'Method not allowed' }) };
