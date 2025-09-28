@@ -1553,7 +1553,13 @@ const SIM_RULES_2025 = {
   id.on('logout', async () => { mapIdentityUserToProfile(null); await CLOUD.load(); loadSettingsUI(); renderAccount(); requireAuth(); });
       id.on('error', (e)=>{ console.warn('Identity error', e); });
       // Inizializza e verifica stato
-      id.init();
+      // Se eseguito in locale, suggerisci al widget l'URL del sito Netlify per evitare il prompt "Development Settings"
+      try{
+        const meta = document.querySelector('meta[name="netlify-site-url"]');
+        const siteUrl = meta && meta.content ? meta.content.trim() : '';
+        if(siteUrl){ id.init({ APIUrl: siteUrl.replace(/\/$/, '')+"/.netlify/identity" }); }
+        else { id.init(); }
+      }catch(_){ id.init(); }
 
       // Bottone email login: apri widget e nascondi overlay per evitare sovrapposizioni
       const emailBtn = document.getElementById('btnEmailLogin');
