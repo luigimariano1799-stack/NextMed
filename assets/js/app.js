@@ -52,8 +52,14 @@ const CLOUD = {
   doc: { settings:{}, reports:[], errors:{} },
   loaded: false,
   _queue: Promise.resolve(),
+  _lastToken: null,
   async token(){
-    try{ const u = window.netlifyIdentity && window.netlifyIdentity.currentUser(); return u ? await u.jwt() : null; }catch(_){ return null; }
+    try{
+      const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+      const tok = u ? await u.jwt() : null;
+      this._lastToken = tok || this._lastToken;
+      return tok;
+    }catch(_){ return this._lastToken; }
   },
   isLoggedIn(){ return !!(window.netlifyIdentity && window.netlifyIdentity.currentUser()); },
   async load(){
@@ -81,6 +87,7 @@ const CLOUD = {
         const r = await fetch('/.netlify/functions/user-data', {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+          keepalive: true,
           body: JSON.stringify(partial||{})
         });
         if(!r.ok) throw new Error('Save failed: '+r.status);
@@ -113,6 +120,21 @@ const CLOUD = {
     };
     this._queue = this._queue.then(run, run);
     return this._queue;
+  },
+  async flush(){
+    // Salva l'intero documento con keepalive prima di chiudere la pagina
+    if(!this.isLoggedIn()) return { ok:true };
+    const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+    let t = this._lastToken;
+    try{ if(u && !t) t = await u.jwt(); }catch(_){ /* ignore */ }
+    try{
+      const r = await fetch('/.netlify/functions/user-data', {
+        method: 'PUT', keepalive: true,
+        headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+        body: JSON.stringify({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors })
+      });
+      return { ok: r.ok };
+    }catch(e){ return { ok:false, error:String(e) }; }
   }
 };
 
@@ -126,7 +148,7 @@ function getReports(){ return Array.isArray(CLOUD.doc.reports) ? CLOUD.doc.repor
 function saveReport(entry){
   const arr = getReports().slice();
   arr.unshift({ ...entry, ts: Date.now() });
-  CLOUD.save({ reports: arr.slice(0,250) });
+  return CLOUD.save({ reports: arr.slice(0,250) });
 }
 
 /* Archivio errori (per materia) */
@@ -284,6 +306,38 @@ document.addEventListener('click', (e)=>{
     return false;
   }
 });
+
+// Sessione "ricordami" 30 minuti: persistiamo un cookie con timestamp ultimo accesso
+function setSessionCookie(){
+  try{
+    const thirty = 30*60; // secondi
+    const expires = new Date(Date.now() + thirty*1000).toUTCString();
+    document.cookie = `nextmed_session=1; path=/; expires=${expires}; SameSite=Lax`;
+    localStorage.setItem('nextmed_last_login', String(Date.now()));
+  }catch(_){/* ignore */}
+}
+function clearSessionCookie(){
+  try{
+    document.cookie = 'nextmed_session=; Max-Age=0; path=/; SameSite=Lax';
+    localStorage.removeItem('nextmed_last_login');
+  }catch(_){/* ignore */}
+}
+function hasValidSession(){
+  try{
+    const last = Number(localStorage.getItem('nextmed_last_login')||'0');
+    if(!last) return false;
+    const elapsed = Date.now() - last;
+    return elapsed <= 30*60*1000; // 30 minuti
+  }catch(_){ return false; }
+}
+
+// Prima del unload prova a flushare i dati al cloud
+window.addEventListener('visibilitychange', ()=>{
+  if(document.visibilityState === 'hidden'){
+    CLOUD.flush();
+  }
+});
+window.addEventListener('pagehide', ()=>{ CLOUD.flush(); });
 
 // --- Home page render ---
 function renderHome(){
@@ -725,7 +779,7 @@ function nextPractice(){
   }catch(e){ console.warn('Errore aggiungendo endPracticeInline', e); }
 }
 
-function finishPractice(timeup){
+async function finishPractice(timeup){
   if(P_TIMER) clearInterval(P_TIMER); P_TIMER=null;
   const st=PRACTICE, el=getPracticeArea(); if(!st) return;
   const total=st.items.length;
@@ -741,7 +795,7 @@ function finishPractice(timeup){
       <button id="backFromResult" class="btn" type="button">Chiudi</button>
     </div>`;
   // Salva il report dell'esercitazione
-  saveReport({
+  await saveReport({
     mode: "Esercitazione",
     overall: { correct: st.correct, wrong: st.wrong, blank: st.blank, total },
     materia: st.materia || '',
@@ -946,7 +1000,7 @@ function scoreSim(){
 }
 
 /* fine simulazione */
-function finishSim(){
+async function finishSim(){
   const el=$("#simArea");
   const res=scoreSim();
   const per = res.perSubject.map(s=>`<div class="kpi">${s.label}: C ${s.correct} • E ${s.wrong} • B ${s.blank} / ${s.total}</div>`).join("");
@@ -966,7 +1020,7 @@ function finishSim(){
   TIMER = null;
   // nascondi il bottone flottante
   // floating end button removed — inline .endSimBtn handles termination
-  saveReport({mode:"Simulazione", overall:res.overall});
+  await saveReport({mode:"Simulazione", overall:res.overall});
 }
 
 // Termina simulazione prematuramente (bottone UI)
@@ -1567,18 +1621,26 @@ const SIM_RULES_2025 = {
     if(window.netlifyIdentity){
       const id = window.netlifyIdentity;
       id.on('init', async user => {
+        // Se la sessione è scaduta (oltre 30 min), esegui logout locale
+        if(user && !hasValidSession()){
+          try{ await id.logout(); }catch(_){ /* no-op */ }
+          user = null;
+        }
         await CLOUD.load();
         const s = mapIdentityUserToProfile(user);
-        if(user) saveSettingsObj(s); // persisti i metadati senza perdere avatar pre-esistente
+        if(user){ setSessionCookie(); saveSettingsObj(s); }
+        else { clearSessionCookie(); }
         loadSettingsUI(); renderAccount(); requireAuth();
       });
       id.on('login', async user => {
         await CLOUD.load();
         const s = mapIdentityUserToProfile(user);
         await CLOUD.save({ settings: s });
+        setSessionCookie();
         loadSettingsUI(); renderAccount(); closeLoginOverlay(); requireAuth();
       });
       id.on('logout', async () => {
+        clearSessionCookie();
         mapIdentityUserToProfile(null);
         await CLOUD.load();
         loadSettingsUI(); renderAccount(); requireAuth();
