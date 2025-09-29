@@ -60,7 +60,7 @@ Deploy su Netlify (fase 1: pubblico e gratuito)
 3. Configura il deploy:
   - Build command: (lascia vuoto, app è statica)
   - Publish directory: `/` (root del progetto contenente `index.html`)
-4. Avvia il deploy: Netlify pubblicherà il sito su un dominio `*.netlify.app` gratuito.
+4. Avvia il deploy: Netlify pubblicherà il sito su un dominio `*.netlify.app` gratuito. In produzione il dominio ufficiale è `nextmed.studio` (collegato a Netlify).
 
 Note tecniche:
 - `data/manifest.json` e i file in `data/questions/` devono essere pubblicati così come sono; `qdb.js` farà fetch di questi file.
