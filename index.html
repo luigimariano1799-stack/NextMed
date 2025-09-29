@@ -612,6 +612,36 @@
         <p class="small">L’eliminazione è irreversibile. Verranno rimossi account e dati associati.</p>
       </div>
     </section>
+    
+    <!-- [5.12] Diagnostica (nascosta, accesso via #diag) -->
+    <section id="diag" class="panel fade-in">
+      <div class="section-header">
+        <h1>Diagnostica</h1>
+        <p class="sub">Strumenti tecnici per verificare autenticazione e sincronizzazione.</p>
+      </div>
+      <div class="card glass">
+        <h3>Stato autenticazione</h3>
+        <div id="diagInfo" class="small"></div>
+        <div class="btnrow" style="margin-top:10px;flex-wrap:wrap;gap:8px;">
+          <button id="btnDiagReloadCloud" class="btn" type="button">Ricarica cloud</button>
+          <button id="btnDiagForceFlush" class="btn" type="button">Forza flush</button>
+          <button id="btnDiagFlushOutbox" class="btn" type="button">Flush outbox</button>
+          <button id="btnDiagDownload" class="btn" type="button">Scarica JSON</button>
+          <button id="btnDiagClearAll" class="btn danger" type="button">Elimina dati utente</button>
+        </div>
+      </div>
+      <div class="card glass">
+        <h3>Documento cloud (riepilogo)</h3>
+        <div id="diagCloud" class="small"></div>
+      </div>
+      <div class="card glass">
+        <h3>Outbox locale</h3>
+        <div id="diagOutbox" class="small"></div>
+      </div>
+      <style>
+        #diag pre { background: var(--card); padding:10px; border-radius:8px; overflow:auto; max-height:40vh; }
+      </style>
+    </section>
   </main>
 
 

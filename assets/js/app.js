@@ -302,6 +302,7 @@ async function handleHash(){
     setActive(tab);
     if(tab==="report"){ await CLOUD.load(); renderReport(); }
     if(tab==="settings"){ loadSettingsUI(); }
+    if(tab==="diag"){ await CLOUD.load(); renderDiagnostics(); }
     if(tab==="account"){ await CLOUD.load(); renderAccount(); }
   }
 
@@ -1514,6 +1515,65 @@ function renderReport(){
   document.getElementById('showAllExReports')?.addEventListener('click', ()=>{ location.hash = 'report/esercitazioni'; });
 }
 /* end [7] */
+
+
+/* [7.b] Diagnostica */
+function renderDiagnostics(){
+  const elInfo = document.getElementById('diagInfo');
+  const elCloud = document.getElementById('diagCloud');
+  const elOut = document.getElementById('diagOutbox');
+  try{
+    const user = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+    const logged = !!user;
+    const email = logged ? (user.email||'-') : '—';
+    const lastLogin = Number(localStorage.getItem('nextmed_last_login')||'0');
+    const sessionOk = hasValidSession();
+    const outboxRaw = localStorage.getItem(CLOUD._OUTBOX_KEY||'nextmed_cloud_outbox');
+    const outData = (()=>{ try{return JSON.parse(outboxRaw||'{}');}catch(_){return {};} })();
+    const doc = CLOUD.doc||{};
+    const cnt = {
+      reports: Array.isArray(doc.reports)? doc.reports.length:0,
+      errors: doc.errors? Object.values(doc.errors).reduce((s,a)=> s + (Array.isArray(a)?a.length:0), 0) : 0
+    };
+
+    if(elInfo){
+      elInfo.innerHTML = `
+        <div>Logged: <b>${logged}</b></div>
+        <div>Email: <code>${email}</code></div>
+        <div>Sessione valida (30m): <b>${sessionOk}</b> ${lastLogin?`<span class="small muted">(${new Date(lastLogin).toLocaleString()})</span>`:''}</div>
+        <div>Queue pendente: <code>${CLOUD._queue? 'ok' : '—'}</code></div>
+      `;
+    }
+
+    if(elCloud){
+      const summary = { settings: doc.settings||{}, reports: cnt.reports, errorsTotal: cnt.errors };
+      const pretty = JSON.stringify(summary, null, 2);
+      elCloud.innerHTML = `<pre>${pretty}</pre>`;
+    }
+    if(elOut){
+      const prettyOut = JSON.stringify(outData, null, 2);
+      elOut.innerHTML = Object.keys(outData||{}).length? `<pre>${prettyOut}</pre>` : '<div class="muted">Outbox vuota.</div>';
+    }
+  }catch(e){
+    if(elInfo){ elInfo.textContent = 'Errore diagnostica: '+(e.message||e); }
+  }
+
+  // Bind pulsanti
+  document.getElementById('btnDiagReloadCloud')?.addEventListener('click', async ()=>{ await CLOUD.load(); renderDiagnostics(); });
+  document.getElementById('btnDiagForceFlush')?.addEventListener('click', async ()=>{ await CLOUD.flush(); await CLOUD.load(); renderDiagnostics(); });
+  document.getElementById('btnDiagFlushOutbox')?.addEventListener('click', async ()=>{ await CLOUD.flushOutbox(); await CLOUD.load(); renderDiagnostics(); });
+  document.getElementById('btnDiagDownload')?.addEventListener('click', ()=>{
+    try{
+      const blob = new Blob([JSON.stringify(CLOUD.doc||{}, null, 2)], {type:'application/json'});
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = 'nextmed-user-doc.json'; a.click(); setTimeout(()=>URL.revokeObjectURL(a.href), 500);
+    }catch(e){ alert('Download fallito: '+(e.message||e)); }
+  });
+  document.getElementById('btnDiagClearAll')?.addEventListener('click', async ()=>{
+    const ok = await showConfirmModal({ title:'Elimina dati utente', message:'Questa azione rimuove tutti i dati applicativi (settings, report, errori). Procedere?', okText:'Elimina', cancelText:'Annulla' });
+    if(!ok) return;
+    await CLOUD.clearAll(); await CLOUD.load(); renderDiagnostics();
+  });
+}
 
 
 /* ===== [Banca domande] ===== */
