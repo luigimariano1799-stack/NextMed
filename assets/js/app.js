@@ -400,6 +400,8 @@ document.addEventListener('click', (e)=>{
   if(!el) return;
   // escludi pulsanti di login/modal
   if(el.id==='btnEmailLogin' || el.id==='googleSignBtn' || el.closest('#login-overlay')) return;
+  // escludi pulsanti diagnostica (dev tools) per evitare blocchi
+  if(el.closest('#diag')) return;
   if(!requireAuth()){
     e.preventDefault(); e.stopPropagation();
     return false;
@@ -1296,6 +1298,8 @@ applyTheme();
 
 // riascolta salvataggio impostazioni per riapplicare tema
 $("#saveSettings")?.addEventListener('click', ()=>{ setTimeout(()=>applyTheme(), 80); });
+// Apri Diagnostica dalla pagina Impostazioni (pulsante temporaneo)
+document.getElementById('openDiag')?.addEventListener('click', ()=>{ location.hash='diag'; setActive('diag'); renderDiagnostics(); });
 
 /* Pagina Account */
 function renderAccount(){
@@ -1646,8 +1650,8 @@ function renderDiagnostics(){
 
   // Bind pulsanti
   document.getElementById('btnDiagReloadCloud')?.addEventListener('click', async ()=>{ await CLOUD.load(); renderDiagnostics(); });
-  document.getElementById('btnDiagForceFlush')?.addEventListener('click', async ()=>{ await CLOUD.flush(); await CLOUD.load(); renderDiagnostics(); });
-  document.getElementById('btnDiagFlushOutbox')?.addEventListener('click', async ()=>{ await CLOUD.flushOutbox(); await CLOUD.load(); renderDiagnostics(); });
+  document.getElementById('btnDiagForceFlush')?.addEventListener('click', async ()=>{ if(!requireAuth()) return; await CLOUD.flush(); await CLOUD.load(); renderDiagnostics(); });
+  document.getElementById('btnDiagFlushOutbox')?.addEventListener('click', async ()=>{ if(!requireAuth()) return; await CLOUD.flushOutbox(); await CLOUD.load(); renderDiagnostics(); });
   document.getElementById('btnDiagDownload')?.addEventListener('click', ()=>{
     try{
       const blob = new Blob([JSON.stringify(CLOUD.doc||{}, null, 2)], {type:'application/json'});
