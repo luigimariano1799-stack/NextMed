@@ -53,6 +53,7 @@ const CLOUD = {
   loaded: false,
   _queue: Promise.resolve(),
   _lastToken: null,
+  _last: { load:null, save:null, flush:null, outbox:null },
   _OUTBOX_KEY: 'nextmed_cloud_outbox',
   _stashOffline(partial){
     try{
@@ -89,6 +90,7 @@ const CLOUD = {
         headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
         body: JSON.stringify(payload)
       });
+      this._last.outbox = { ok:r.ok, status:r.status, at:Date.now() };
       if(r.ok){ localStorage.removeItem(this._OUTBOX_KEY); return { ok:true };
       }
       return { ok:false };
@@ -109,6 +111,7 @@ const CLOUD = {
     const t = await this.token();
     try{
       const r = await fetch('/.netlify/functions/user-data', { headers: t? { Authorization: 'Bearer '+t } : {} });
+      this._last.load = { ok:r.ok, status:r.status, at:Date.now() };
       if(r.ok){ this.doc = await r.json(); this.loaded = true; return this.doc; }
     }catch(_){/* ignore */}
     this.loaded = true; return this.doc;
@@ -135,10 +138,9 @@ const CLOUD = {
           const r = await fetch('/.netlify/functions/user-data', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
-            keepalive: true,
             body: JSON.stringify(partial||{})
           });
-          if(r.ok) return { ok:true };
+          if(r.ok){ this._last.save = { ok:true, status:r.status, at:Date.now() }; return { ok:true }; }
           // Se 401/403 prova a rinnovare jwt e ritenta
           if(r.status===401 || r.status===403){
             try{ this._lastToken = null; await this.token(); }catch(_){ }
@@ -149,6 +151,7 @@ const CLOUD = {
           if(attempts>=3){
             console.warn('CLOUD.save fallito, metto in outbox', e);
             try{ this._stashOffline(partial||{}); }catch(_){ }
+            this._last.save = { ok:false, error:String(e), at:Date.now() };
             return { ok:false, error:String(e) };
           }
           await new Promise(res=>setTimeout(res, delay));
@@ -178,21 +181,22 @@ const CLOUD = {
     const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
     let t = this._lastToken;
     try{ if(u && !t) t = await u.jwt(); }catch(_){ /* ignore */ }
-    try{
-      const r = await fetch('/.netlify/functions/user-data', {
-        method: 'PUT', keepalive: true,
-        headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
-        body: JSON.stringify({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors })
-      });
-      if(!r.ok){
-        // stash se fallisce (es. token scaduto al close)
-        try{ this._stashOffline({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors }); }catch(_){ }
-      }
-      return { ok: r.ok };
-    }catch(e){
-      try{ this._stashOffline({ settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors }); }catch(_){ }
-      return { ok:false, error:String(e) };
+    const payload = { settings:this.doc.settings, reports:this.doc.reports, errors:this.doc.errors };
+    // Esegue 1 retry su 401/403 per token scaduto
+    for(let attempt=0; attempt<2; attempt++){
+      try{
+        const r = await fetch('/.netlify/functions/user-data', {
+          method: 'PUT', keepalive: true,
+          headers: { 'Content-Type': 'application/json', ...(t? { Authorization: 'Bearer '+t } : {}) },
+          body: JSON.stringify(payload)
+        });
+        this._last.flush = { ok:r.ok, status:r.status, at:Date.now() };
+        if(r.ok) return { ok:true };
+        if(r.status===401 || r.status===403){ try{ this._lastToken=null; t = await this.token(); }catch(_){ } }
+      }catch(e){ this._last.flush = { ok:false, error:String(e), at:Date.now() }; }
     }
+    try{ this._stashOffline(payload); }catch(_){ }
+    return { ok:false };
   }
 };
 
@@ -213,6 +217,25 @@ function saveReport(entry){
     try{ setTimeout(()=>{ CLOUD.flush(); }, 0); }catch(_){/* ignore */}
     // ricarica doc per riflettere eventuale merge lato server
     try{ await CLOUD.load(); }catch(_){ }
+    // Best-effort: invia riassunto al DB (se Identity presente)
+    try{
+      const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+      if(u){
+        const tok = await u.jwt();
+        const payload = {
+          ts: withTs.ts,
+          mode: withTs.mode,
+          materia: withTs.materia||null,
+          argomento: withTs.argomento||null,
+          overall: withTs.overall||{}
+        };
+        fetch('/.netlify/functions/db-analytics', {
+          method:'POST',
+          headers: { 'Content-Type':'application/json', Authorization: 'Bearer '+tok },
+          body: JSON.stringify(payload)
+        }).catch(()=>{});
+      }
+    }catch(_){ /* ignora errori DB */ }
   });
 }
 
@@ -1408,10 +1431,37 @@ function renderAccount(){
   document.getElementById('accAvatar')?.addEventListener('click', ()=>{ fileInput?.click(); });
   fileInput?.addEventListener('change', async (ev)=>{
     const file = ev.target.files && ev.target.files[0]; if(!file) return;
+
+    async function compressImageFile(file, maxEdge=256){
+      // Ritorna dataURL JPEG compresso e ridimensionato (maxEdge px)
+      const createImg = (src)=> new Promise((resolve, reject)=>{ const img = new Image(); img.onload = ()=>resolve(img); img.onerror = reject; img.src = src; });
+      try{
+        const blobUrl = URL.createObjectURL(file);
+        const img = await createImg(blobUrl);
+        const w = img.naturalWidth || img.width; const h = img.naturalHeight || img.height;
+        const scale = Math.min(1, maxEdge / Math.max(w,h));
+        const tw = Math.max(1, Math.round(w * scale));
+        const th = Math.max(1, Math.round(h * scale));
+        const canvas = document.createElement('canvas'); canvas.width = tw; canvas.height = th;
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0, tw, th);
+        URL.revokeObjectURL(blobUrl);
+        let quality = 0.85; let out = canvas.toDataURL('image/jpeg', quality);
+        // Riduci ulteriormente se supera ~150KB
+        for(let i=0;i<3 && out.length > 150*1024; i++){
+          quality -= 0.15; out = canvas.toDataURL('image/jpeg', Math.max(0.5, quality));
+        }
+        return out;
+      }catch(_){
+        // Fallback: simple FileReader dataURL (potrebbe essere grande/HEIC)
+        return await new Promise((res, rej)=>{ const r=new FileReader(); r.onload=()=>res(r.result); r.onerror=rej; r.readAsDataURL(file); });
+      }
+    }
+
     try{
-      const dataUrl = await new Promise((res, rej)=>{ const r = new FileReader(); r.onload = ()=>res(r.result); r.onerror = rej; r.readAsDataURL(file); });
+      const dataUrl = await compressImageFile(file, 256);
       const st = getSettings(); st.profile = st.profile || {}; st.profile.avatar = String(dataUrl);
-      saveSettingsObj(st);
+      await saveSettingsObj(st);
       if(accAvatar) accAvatar.src = st.profile.avatar;
       if(headerIcon) headerIcon.src = st.profile.avatar;
     }catch(e){ alert('Impossibile caricare l\'immagine: '+ (e?.message||e)); }
@@ -1500,6 +1550,10 @@ function renderReport(){
         <div class="report-list">${exHtml}</div>
         <button id="showAllExReports" class="btn small" style="margin-top:10px;">Vedi tutte</button>
       </div>
+      <div class="report-col">
+        <h3>Leaderboard (30 giorni)</h3>
+        <div id="repLeaderboard" class="small muted">Caricamento…</div>
+      </div>
     </div>
     <style>
       .report-columns { display: flex; gap: 32px; flex-wrap: wrap; margin-top: 18px; }
@@ -1513,6 +1567,27 @@ function renderReport(){
   `;
   document.getElementById('showAllSimReports')?.addEventListener('click', ()=>{ location.hash = 'report/simulazioni'; });
   document.getElementById('showAllExReports')?.addEventListener('click', ()=>{ location.hash = 'report/esercitazioni'; });
+
+  // Carica leaderboard (best effort, richiede DB attivo)
+  (async ()=>{
+    try{
+      const u = window.netlifyIdentity && window.netlifyIdentity.currentUser();
+      const tok = u ? await u.jwt() : null;
+      const r = await fetch('/.netlify/functions/db-analytics?leaderboard=1', { headers: tok? { Authorization:'Bearer '+tok } : {} });
+      if(!r.ok) throw 0;
+      const j = await r.json();
+      const items = Array.isArray(j.items) ? j.items : [];
+      const box = document.getElementById('repLeaderboard');
+      if(!box) return;
+      if(items.length===0){ box.textContent = 'Nessun dato sufficiente al momento.'; return; }
+      box.classList.remove('muted');
+      box.innerHTML = items.map((it, idx)=>{
+        const email = (it.email||'').split('@')[0];
+        const acc = typeof it.accuracy === 'number' ? it.accuracy : (it.accuracy?.toFixed ? it.accuracy.toFixed(2) : '—');
+        return `<div>${idx+1}. <b>${email}</b> • ${acc}% su ${it.total} quesiti (${it.runs} sessioni)</div>`;
+      }).join('');
+    }catch(_){ const box = document.getElementById('repLeaderboard'); if(box) box.textContent = 'Leaderboard non disponibile.'; }
+  })();
 }
 /* end [7] */
 
@@ -1522,6 +1597,7 @@ function renderDiagnostics(){
   const elInfo = document.getElementById('diagInfo');
   const elCloud = document.getElementById('diagCloud');
   const elOut = document.getElementById('diagOutbox');
+  const elOps = document.getElementById('diagOps');
   try{
     const user = window.netlifyIdentity && window.netlifyIdentity.currentUser();
     const logged = !!user;
@@ -1554,6 +1630,16 @@ function renderDiagnostics(){
       const prettyOut = JSON.stringify(outData, null, 2);
       elOut.innerHTML = Object.keys(outData||{}).length? `<pre>${prettyOut}</pre>` : '<div class="muted">Outbox vuota.</div>';
     }
+    if(elOps){
+      const last = CLOUD._last||{};
+      const fmt = (o)=> o? `${o.ok?'OK':'ERR'} • status:${o.status||'-'} • ${o.error||''} • ${new Date(o.at||Date.now()).toLocaleTimeString()}` : '—';
+      elOps.innerHTML = `<ul>
+        <li>Load: ${fmt(last.load)}</li>
+        <li>Save: ${fmt(last.save)}</li>
+        <li>Flush: ${fmt(last.flush)}</li>
+        <li>Outbox: ${fmt(last.outbox)}</li>
+      </ul>`;
+    }
   }catch(e){
     if(elInfo){ elInfo.textContent = 'Errore diagnostica: '+(e.message||e); }
   }
@@ -1572,6 +1658,13 @@ function renderDiagnostics(){
     const ok = await showConfirmModal({ title:'Elimina dati utente', message:'Questa azione rimuove tutti i dati applicativi (settings, report, errori). Procedere?', okText:'Elimina', cancelText:'Annulla' });
     if(!ok) return;
     await CLOUD.clearAll(); await CLOUD.load(); renderDiagnostics();
+  });
+  document.getElementById('btnDiagTestSave')?.addEventListener('click', async ()=>{
+    const arr = getReports().slice();
+    arr.unshift({ mode:'Test', overall:{correct:0,wrong:0,blank:0,total:0}, ts: Date.now() });
+    await CLOUD.save({ reports: arr.slice(0,250) });
+    await CLOUD.load();
+    renderDiagnostics();
   });
 }
 

@@ -628,6 +628,7 @@
           <button id="btnDiagFlushOutbox" class="btn" type="button">Flush outbox</button>
           <button id="btnDiagDownload" class="btn" type="button">Scarica JSON</button>
           <button id="btnDiagClearAll" class="btn danger" type="button">Elimina dati utente</button>
+          <button id="btnDiagTestSave" class="btn" type="button">Test salvataggio</button>
         </div>
       </div>
       <div class="card glass">
@@ -637,6 +638,10 @@
       <div class="card glass">
         <h3>Outbox locale</h3>
         <div id="diagOutbox" class="small"></div>
+      </div>
+      <div class="card glass">
+        <h3>Ultime operazioni</h3>
+        <div id="diagOps" class="small"></div>
       </div>
       <style>
         #diag pre { background: var(--card); padding:10px; border-radius:8px; overflow:auto; max-height:40vh; }
